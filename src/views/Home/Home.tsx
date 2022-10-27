@@ -46,8 +46,8 @@ const Home = () => (
       <div>prototyping</div>
     </Marquee>
     <Projects />
-    {/* <Intro /> */}
-    {/* <Section>
+    <Intro />
+    <Section>
       <StaticImage
         src="../../../static/wireframe.jpg"
         alt="A dinosaur"
@@ -55,9 +55,9 @@ const Home = () => (
         objectFit="cover"
         aspectRatio={2}
       />
-    </Section> */}
+    </Section>
 
-    {/* <Aim /> */}
+    <Aim />
 
     {/* <Section>
       <StaticImage
