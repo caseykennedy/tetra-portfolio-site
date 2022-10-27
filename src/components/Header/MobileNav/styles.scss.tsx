@@ -15,8 +15,25 @@ export const MobileNav = styled(motion.ul)`
   flex-wrap: wrap;
 
   margin: 0;
-  height: 100%;
-  width: 100%;
+  padding: var(--space-xxxxl);
+  height: 100vh;
+  width: 100vw;
+
+  .content {
+    display: flex;
+    flex-flow: column nowrap;
+    background: var(--color-bg);
+    /* border: var(--border); */
+    margin: 0;
+    padding: var(--space-xxl);
+    width: 100%;
+
+    div {
+      flex: 1;
+      display: flex;
+      font-size: var(--text-lg);
+    }
+  }
 `
 
 export const NavLink = styled(motion.li)`

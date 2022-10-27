@@ -3,9 +3,11 @@
 
 import * as React from 'react'
 import { motion } from 'framer-motion'
+import { Canvas } from '@react-three/fiber'
 
 // Components
 import Icon from '../../../components/Icons'
+import TetraGeo from '../../../components/TetraGeo'
 
 // Hooks
 import useDate from '../../../hooks/useDate'
@@ -51,6 +53,25 @@ const Hero = () => {
             </a>
           </div>
         </div>
+      </div>
+      <div>
+        {/* <Canvas camera={{ position: [0, 2, 10], fov: 60 }}>
+          <TetraGeo
+            flatShading={false}
+            position={[0, 1, 0]}
+            radius={1}
+            speed={0.01}
+            wireframe={false}
+          />
+          <TetraGeo
+            flatShading={false}
+            position={[0, 1, 0]}
+            radius={4}
+            detail={0}
+            speed={0.003}
+            wireframe={true}
+          />
+        </Canvas> */}
       </div>
     </S.Hero>
   )

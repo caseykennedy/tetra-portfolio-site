@@ -61,7 +61,7 @@ const listVariants = {
 
 type LinkProps = {
   item: {
-    link: string,
+    link: string
     name: string
   }
   handleExitOnClick: () => void
@@ -85,9 +85,17 @@ type NavProps = {
 const MobileNav = ({ handleExitOnClick, isOpen }: NavProps) => (
   <motion.div initial="closed" animate={isOpen ? 'open' : 'closed'}>
     <S.MobileNav variants={listVariants}>
-      {routes.map((item, idx) => (
+      <div className="content">
+        <motion.div variants={itemVariants}>mission</motion.div>
+        <motion.div variants={itemVariants}>aim</motion.div>
+        <motion.div variants={itemVariants}>manifesto</motion.div>
+        <motion.div variants={itemVariants}>process</motion.div>
+        <motion.div variants={itemVariants}>capabilities</motion.div>
+        <motion.div variants={itemVariants}>team</motion.div>
+      </div>
+      {/* {routes.map((item, idx) => (
         <NavLink key={idx} handleExitOnClick={handleExitOnClick} item={item} />
-      ))}
+      ))} */}
     </S.MobileNav>
   </motion.div>
 )

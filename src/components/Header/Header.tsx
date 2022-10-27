@@ -5,9 +5,8 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'gatsby'
 
 // Components
-import Icon from '../Icons'
-// import MobileNav from './MobileNav'
-// import Modal from '../Modal'
+import MobileNav from './MobileNav'
+import Modal from '../Modal'
 
 // Styles
 import * as S from './styles.scss'
@@ -17,8 +16,8 @@ import * as S from './styles.scss'
 const Header = () => {
   const [theme, setTheme] = useState('default')
   const [isNavOpen, setNavOpen] = useState(false)
-  const toggleMenu = () => setNavOpen(!isNavOpen)
 
+  const toggleMenu = () => setNavOpen(!isNavOpen)
   const toggleTheme = () => {
     setTheme(theme === 'default' ? 'lightMode' : 'default')
     document.documentElement.setAttribute('data-theme', theme)
@@ -43,19 +42,29 @@ const Header = () => {
           </div>
         </div>
 
-        <button
-          type="button"
-          onClick={toggleTheme}
-          onKeyDown={toggleTheme}
-          className="yinyang btn"
-        >
-          ◒
-        </button>
+        <div className="utils">
+          <button
+            type="button"
+            onClick={toggleMenu}
+            onKeyDown={toggleMenu}
+            className="info-toggle"
+          >
+            info
+          </button>
+          <button
+            type="button"
+            onClick={toggleTheme}
+            onKeyDown={toggleTheme}
+            className="theme-toggle"
+          >
+            ◒
+          </button>
+        </div>
       </S.Header>
 
-      {/* <Modal open={isNavOpen} close={toggleMenu}>
+      <Modal open={isNavOpen} close={toggleMenu}>
         <MobileNav isOpen={isNavOpen} handleExitOnClick={toggleMenu} />
-      </Modal> */}
+      </Modal>
     </>
   )
 }

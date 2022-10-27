@@ -24,7 +24,7 @@ export const Header = styled.header`
   /* padding-bottom: var(--space-xxxl); */
   height: var(--header-height);
   width: 100%;
-  z-index: 9999;
+  z-index: 9;
 
   /* @media ${breakpoint.tablet} {
     flex-flow: column nowrap;
@@ -48,20 +48,31 @@ export const Header = styled.header`
     }
   }
 
-  .marquee {
-    font-family: var(--font-sans);
-    font-weight: 600;
-    position: relative;
+  .utils {
+    display: flex;
+    align-items: center;
+    gap: var(--gutter);
 
-    @media ${breakpoint.tablet} {
-      transform-origin: center center;
-      transform: rotate(-90deg);
+    button {
+      display: flex;
+      place-content: center;
+      padding: 0;
+      background-color: transparent;
+      border: none;
+      color: var(--color-text-muted);
+      cursor: pointer;
+      transition: color var(--transition);
+
+      &:hover {
+        color: var(--color-text);
+      }
     }
   }
 
-  .yinyang {
-    display: flex;
-    place-content: center;
+  .info-toggle {
+  }
+
+  .theme-toggle {
     font-size: 1.5rem;
   }
 `
