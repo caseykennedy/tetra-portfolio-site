@@ -24,6 +24,7 @@ export const MobileNav = styled(motion.ul)`
     flex-flow: column nowrap;
     background: var(--color-bg);
     /* border: var(--border); */
+    border-radius: var(--radius-sm);
     margin: 0;
     padding: var(--space-xxl);
     width: 100%;
