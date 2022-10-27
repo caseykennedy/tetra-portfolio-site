@@ -7,7 +7,7 @@ import { breakpoint } from '../../../styles/mixins'
 export const Outro = styled(motion.div)`
   display: flex;
   flex-flow: column nowrap;
-  height: 60vh;
+  /* height: 60vh; */
   padding: var(--gutter);
 
   @media ${breakpoint.tablet} {

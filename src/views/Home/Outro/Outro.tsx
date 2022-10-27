@@ -20,12 +20,12 @@ const Outro = () => {
   const nevadaTime = useDate()
   return (
     <S.Outro>
-      <div className="billboard">
+      {/* <div className="billboard">
         <h2>
           We build blockchain dApps and design future-proof crypto brands. Reach
           out if you have a project or idea you&apos;d like to discuss.
         </h2>
-      </div>
+      </div> */}
       <div className="meta">
         <div>
           <h4>contact</h4>

@@ -55,7 +55,7 @@ const Hero = () => {
         </div>
       </div>
       <div>
-        {/* <Canvas camera={{ position: [0, 2, 10], fov: 60 }}>
+        <Canvas camera={{ position: [0, 2, 10], fov: 60 }}>
           <TetraGeo
             flatShading={false}
             position={[0, 1, 0]}
@@ -71,7 +71,7 @@ const Hero = () => {
             speed={0.003}
             wireframe={true}
           />
-        </Canvas> */}
+        </Canvas>
       </div>
     </S.Hero>
   )
