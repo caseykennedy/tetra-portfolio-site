@@ -59,12 +59,12 @@ export const Header = styled.header`
       padding: 0;
       background-color: transparent;
       border: none;
-      color: var(--color-text-muted);
+      color: var(--color-text);
       cursor: pointer;
       transition: color var(--transition);
 
       &:hover {
-        color: var(--color-text);
+        color: var(--color-text-muted);
       }
     }
   }

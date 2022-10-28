@@ -14,7 +14,7 @@ import * as S from './styles.scss'
 // ___________________________________________________________________
 
 const Header = () => {
-  const [theme, setTheme] = useState('default')
+  const [theme, setTheme] = useState('lightMode')
   const [isNavOpen, setNavOpen] = useState(false)
 
   const toggleMenu = () => setNavOpen(!isNavOpen)
