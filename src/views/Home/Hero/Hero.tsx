@@ -31,7 +31,8 @@ const Hero = () => {
               {/* Helping brands develop
               <br />
               cutting-edge digital experiences. */}
-              Tetra is a design and development studio for crypto startups.
+              Tetra is a design and development studio for crypto startups and
+              upstarts.
               <br />
               <br />
               We believe the next generation of the internet (web3) will be
@@ -63,17 +64,19 @@ const Hero = () => {
       </S.Hero>
       <S.Tetra>
         <Canvas camera={{ position: [0, 2, 10], fov: 60 }}>
+          {/* <ambientLight intensity={0.5} /> */}
           <ambientLight intensity={1} />
           <spotLight
             position={[20, 20, 25]}
             penumbra={1}
             angle={0.25}
-            color="black"
+            color="cyan"
             // castShadow
             // shadow-mapSize={[512, 512]}
           />
-          <directionalLight position={[0, 5, -4]} intensity={20} />
-          <directionalLight position={[0, -15, -0]} intensity={19} color="blue" />
+          <directionalLight position={[0, 5, -4]} intensity={4} />
+          <directionalLight position={[0, -15, -0]} intensity={2} color="red" />
+
           <TetraGeo
             flatShading={false}
             position={[0, 1, 0]}
@@ -85,8 +88,8 @@ const Hero = () => {
             flatShading={false}
             position={[0, 1, 0]}
             radius={4}
-            detail={0}
-            speed={0.003}
+            detail={1}
+            speed={0.0009}
             wireframe={true}
           />
         </Canvas>

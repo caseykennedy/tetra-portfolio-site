@@ -44,10 +44,10 @@ const TetraGeo = (props: Props) => {
       onPointerOver={() => setHover(true)}
       onPointerOut={() => setHover(false)}
     >
-      <tetrahedronGeometry attach="geometry" args={[radius, detail]} />
+      <tetrahedronGeometry args={[radius, detail]} />
       <meshStandardMaterial
         attach="material"
-        color="#a28620"
+        color="#404f94"
         flatShading={flatShading}
         wireframe={wireframe}
       />

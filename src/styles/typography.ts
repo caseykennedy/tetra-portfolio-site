@@ -53,7 +53,7 @@ const Typography = css`
 
     // font size
     --text-root-size: 1rem;
-    --text-base-size: 1rem; // body font-size
+    --text-base-size: 1.15rem; // body font-size
     --text-scale-ratio: 1.25; // multiplier used to generate the type scale values 👇
 
     // font weight
@@ -212,7 +212,7 @@ const Typography = css`
 
   h1,
   .text-h1 {
-    font-size: var(--text-xxl);
+    font-size: var(--text-xl);
   }
 
   h2,
