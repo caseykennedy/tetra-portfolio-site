@@ -128,9 +128,8 @@ const Projects = () => {
                 />
               </motion.div>
             </Link>
-            <div className="project__meta">
+            {/* <div className="project__meta">
               <div className="title">
-                {/* {item.year} */}
                 <span>
                   <strong>{item.title}</strong>
                 </span>
@@ -142,7 +141,7 @@ const Projects = () => {
                   </motion.li>
                 ))}
               </motion.ul>
-            </div>
+            </div> */}
           </motion.div>
         ))}
       </div>

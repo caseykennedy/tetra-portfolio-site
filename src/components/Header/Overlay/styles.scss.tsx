@@ -9,7 +9,7 @@ import breakpoint from '../../../utils/breakpoint'
 // Begin Styles
 // ___________________________________________________________________
 
-export const MobileNav = styled(motion.ul)`
+export const Overlay = styled(motion.ul)`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -18,6 +18,21 @@ export const MobileNav = styled(motion.ul)`
   padding: var(--space-xxxxl);
   height: 100vh;
   width: 100vw;
+
+  .exit {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    color: var(--color-text);
+    cursor: pointer;
+    transition: color var(--transition);
+
+    &:hover {
+      color: var(--color-text-muted);
+    }
+  }
 
   .content {
     display: flex;
@@ -39,26 +54,4 @@ export const MobileNav = styled(motion.ul)`
   }
 `
 
-export const NavLink = styled(motion.li)`
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-
-  @media ${breakpoint.tablet} {
-    padding: 0;
-  }
-
-  a {
-    color: var(--color-text);
-    font-size: var(--text-lg);
-    text-decoration: none;
-    width: 100%;
-
-    &:hover {
-      color: inherit;
-      text-decoration: underline;
-    }
-  }
-`
+export default Overlay

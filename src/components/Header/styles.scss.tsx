@@ -7,7 +7,7 @@ import breakpoint from '../../utils/breakpoint'
 
 export const Header = styled.header`
   background: var(--color-bg);
-  box-shadow: 0px 15px 30px 10px var(--color-bg);
+  /* box-shadow: 0px 15px 30px 10px var(--color-bg); */
   /* background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 65%); */
   /* backdrop-filter: blur(10px); */
   /* opacity: 0.8; */
@@ -39,6 +39,14 @@ export const Header = styled.header`
 
     @media ${breakpoint.tablet} {
       flex-flow: column nowrap;
+    }
+
+    a {
+      color: var(--color-text-bright);
+
+      &:hover {
+        color: var(--color-text-muted);
+      }
     }
 
     .symbol {

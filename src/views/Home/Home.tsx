@@ -38,26 +38,15 @@ import * as S from './styles.scss'
 const Home = () => (
   <S.Home>
     <Hero />
-    <Marquee>
+    {/* <Marquee>
       <div>web + app dev</div>
       <div>ui + ux</div>
       <div>design systems</div>
       <div>wireframing</div>
       <div>prototyping</div>
-    </Marquee>
-    <Projects />
-    <Intro />
-    <Section>
-      <StaticImage
-        src="../../../static/wireframe.jpg"
-        alt="A dinosaur"
-        placeholder="blurred"
-        objectFit="cover"
-        aspectRatio={2}
-      />
-    </Section>
+    </Marquee> */}
 
-    <Aim />
+    <Projects />
 
     {/* <Section>
       <StaticImage
@@ -70,11 +59,11 @@ const Home = () => (
     </Section> */}
     {/* <Approach /> */}
     {/* <Process /> */}
-    <Section>
+    <Section pt="3px">
       <DribbbleGrid />
     </Section>
     {/* <Sites /> */}
-    <Outro />
+    {/* <Outro /> */}
   </S.Home>
 )
 

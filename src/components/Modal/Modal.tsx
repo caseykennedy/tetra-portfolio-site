@@ -14,7 +14,7 @@ type ModalProps = {
 
 const modalStyles = {
   overlay: {
-    background: 'hsla(249,11%, 6%, 0.75)',
+    background: 'hsla(249,11%, 6%, 0.5)',
     backdropFilter: 'blur(5px)',
     boxShadow: 'var(--shadow-sm)',
   },

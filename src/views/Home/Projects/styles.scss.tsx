@@ -9,13 +9,13 @@ import { breakpoint } from '../../../styles/mixins'
 export const Projects = styled(motion.div)`
   display: flex;
   padding: 0 var(--gutter);
-  margin-bottom: var(--gutter);
+  /* margin-bottom: var(--gutter); */
 
   .project-grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-auto-rows: auto;
-    gap: var(--gutter);
+    gap: 3px;
 
     width: 100%;
 
@@ -25,7 +25,7 @@ export const Projects = styled(motion.div)`
   }
 
   .project {
-    margin-bottom: var(--space-xl);
+    /* margin-bottom: var(--space-xl); */
 
     &__figure {
       /* border-radius: var(--radius-sm); */

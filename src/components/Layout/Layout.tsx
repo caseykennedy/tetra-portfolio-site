@@ -1,7 +1,10 @@
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 // Layout:
 // ___________________________________________________________________
 
-import React, { useRef } from 'react'
+import React, { useEffect } from 'react'
+import { useDarkMode } from 'usehooks-ts'
 
 // Components
 import Cursor from '../Cursor'
@@ -23,6 +26,12 @@ export type LayoutProps = {
 }
 
 const Layout = ({ children }: LayoutProps) => {
+  const { isDarkMode } = useDarkMode()
+  useEffect(() => {
+    const dataTheme = isDarkMode ? 'darkMode' : 'lightMode'
+    document.documentElement.setAttribute('data-theme', dataTheme)
+  }, [isDarkMode])
+
   console.log(
     `%c namelayer | decentralize the internet | built by tetra/ `,
     `background: #78FFF2; color: #000000`
@@ -35,7 +44,6 @@ const Layout = ({ children }: LayoutProps) => {
         {/* <SmoothScroll>{children}</SmoothScroll> */}
         {children}
       </S.Content>
-      {/* <Footer /> */}
     </S.Wrapper>
   )
 }

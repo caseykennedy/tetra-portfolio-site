@@ -25,7 +25,7 @@ export const AccordionToggle = styled(motion.div)`
   align-items: flex-end;
   justify-content: space-between;
 
-  color: var(--color-heading);
+  color: var(--color-text-bright);
   font-size: var(--text-lg);
   font-weight: 600;
   cursor: pointer;

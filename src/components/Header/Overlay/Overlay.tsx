@@ -10,29 +10,6 @@ import * as S from './styles.scss'
 
 // ___________________________________________________________________
 
-const routes = [
-  {
-    name: 'Pre-register',
-    link: '/search',
-  },
-  {
-    name: 'How it works',
-    link: '/how-it-works',
-  },
-  {
-    name: 'Why .nft?',
-    link: '/why-nft',
-  },
-  {
-    name: 'Policies',
-    link: '/policies',
-  },
-  {
-    name: 'FAQs',
-    link: '/faq',
-  },
-]
-
 const itemVariants = {
   open: {
     y: 0,
@@ -59,33 +36,18 @@ const listVariants = {
   },
 }
 
-type LinkProps = {
-  item: {
-    link: string
-    name: string
-  }
-  handleExitOnClick: () => void
-}
-
-const NavLink = ({ item, handleExitOnClick }: LinkProps) => (
-  <S.NavLink
-    variants={itemVariants}
-    whileTap={{ scale: 0.98 }}
-    onClick={handleExitOnClick}
-  >
-    <Link to={item.link}>{item.name}</Link>
-  </S.NavLink>
-)
-
 type NavProps = {
   handleExitOnClick: () => void
   isOpen: boolean
 }
 
-const MobileNav = ({ handleExitOnClick, isOpen }: NavProps) => (
+const Overlay = ({ handleExitOnClick, isOpen }: NavProps) => (
   <motion.div initial="closed" animate={isOpen ? 'open' : 'closed'}>
-    <S.MobileNav variants={listVariants}>
+    <S.Overlay variants={listVariants}>
       <div className="content">
+        <button type="button" onClick={handleExitOnClick} className="exit">
+          exit
+        </button>
         <motion.div variants={itemVariants}>mission</motion.div>
         <motion.div variants={itemVariants}>aim</motion.div>
         <motion.div variants={itemVariants}>manifesto</motion.div>
@@ -96,8 +58,8 @@ const MobileNav = ({ handleExitOnClick, isOpen }: NavProps) => (
       {/* {routes.map((item, idx) => (
         <NavLink key={idx} handleExitOnClick={handleExitOnClick} item={item} />
       ))} */}
-    </S.MobileNav>
+    </S.Overlay>
   </motion.div>
 )
 
-export default MobileNav
+export default Overlay

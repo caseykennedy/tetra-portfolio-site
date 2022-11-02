@@ -53,12 +53,12 @@ const Typography = css`
 
     // font size
     --text-root-size: 1rem;
-    --text-base-size: 1.15rem; // body font-size
+    --text-base-size: 1rem; // body font-size
     --text-scale-ratio: 1.25; // multiplier used to generate the type scale values 👇
 
     // font weight
     --body-font-weight: 400;
-    --heading-font-weight: 600;
+    --heading-font-weight: 400;
 
     // line-height
     --body-line-height: 1.15;
@@ -204,15 +204,15 @@ const Typography = css`
   h5 {
     ${textCrop(1, 0.05, -0.05)}
 
-    color: var(--color-heading);
-    font-family: var(--font-sans);
+    color: var(--color-text-bright);
+    font-family: var(--font-seconda);
     font-weight: var(--heading-font-weight);
     line-height: var(--heading-line-height);
   }
 
   h1,
   .text-h1 {
-    font-size: var(--text-lg);
+    font-size: var(--text-xxl);
   }
 
   h2,

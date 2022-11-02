@@ -13,11 +13,11 @@ const Colors = css`
     --color-white: hsl(0, 0%, 100%);
 
     // background
-    --color-bg: hsl(249,11%, 6%);
+    --color-bg: hsl(249,11%, 9%);
     // typography
     --color-text: hsl(245, 8%, 78%);
     --color-text-muted: hsl(245, 8%, 58%);
-    --color-heading: hsl(245, 8%, 92%);
+    --color-text-bright: hsl(245, 8%, 92%);
     // border
     --color-border: hsl(245, 8%, 58%);
   }
@@ -31,7 +31,7 @@ const Colors = css`
     // typography
     --color-text: hsl(270, 5%, 20%);
     --color-text-muted: hsl(245, 8%, 38%);
-    --color-heading: hsl(249,11%, 6%);
+    --color-text-bright: hsl(249,11%, 6%);
   }
 `
 
