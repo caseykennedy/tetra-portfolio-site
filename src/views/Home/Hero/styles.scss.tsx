@@ -25,11 +25,11 @@ export const Hero = styled.div`
       display: flex;
       flex-flow: column nowrap;
       justify-content: space-between;
-      align-items: flex-end;
       padding: var(--gutter);
 
       position: sticky;
       top: var(--header-height);
+      max-inline-size: 72ch;
 
       /* &:first-child {
         border-bottom: var(--border);

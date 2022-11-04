@@ -201,7 +201,7 @@ const Typography = css`
     }
 
     @media ${breakpoint.desktop} {
-      font-size: var(--text-xxxl);
+      font-size: var(--text-xxl);
     }
   }
 
