@@ -15,7 +15,7 @@ export const Overlay = styled(motion.ul)`
   flex-wrap: wrap;
 
   margin: 0;
-  padding: var(--space-xxxxl);
+  padding: var(--space-xl);
   height: 100vh;
   width: 100vw;
 
@@ -37,11 +37,9 @@ export const Overlay = styled(motion.ul)`
   .content {
     display: flex;
     flex-flow: column nowrap;
-    backdrop-filter: blur(5px);
     background: var(--color-bg);
-    /* border: var(--border); */
-    border-radius: var(--radius-sm);
-    opacity: 0.925;
+    border: var(--border);
+    box-shadow: var(--shadow-md);
     margin: 0;
     padding: var(--space-xxl);
     width: 100%;

@@ -11,9 +11,6 @@ const Theme = css`
     // Border
     --border: 1px solid var(--color-border);
 
-    // Header
-    --header-height: 44px;
-
     // Icons
     --icon-size: 1.25rem;
 

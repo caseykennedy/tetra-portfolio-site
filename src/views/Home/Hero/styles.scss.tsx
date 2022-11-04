@@ -6,7 +6,7 @@ import { breakpoint } from '../../../styles/mixins'
 export const Hero = styled.div`
   display: flex;
   flex-flow: column nowrap;
-  min-height: 85vh;
+  min-height: 75vh;
   position: relative;
   z-index: 1;
 
@@ -16,7 +16,7 @@ export const Hero = styled.div`
   }
 
   .billboard {
-    flex: 1;
+    flex: 1.75;
     display: flex;
     flex-flow: column nowrap;
     position: relative;
@@ -25,10 +25,11 @@ export const Hero = styled.div`
       display: flex;
       flex-flow: column nowrap;
       justify-content: space-between;
+      align-items: flex-end;
       padding: var(--gutter);
 
       position: sticky;
-      top: calc(var(--header-height) + calc(var(--gutter) + var(--space-xl)));
+      top: var(--header-height);
 
       /* &:first-child {
         border-bottom: var(--border);
@@ -40,7 +41,6 @@ export const Hero = styled.div`
     flex: 1;
     display: flex;
     gap: var(--gutter);
-    margin-top: var(--header-height);
     padding: var(--gutter);
     position: relative;
 
@@ -50,9 +50,10 @@ export const Hero = styled.div`
       flex-flow: column nowrap;
       align-items: flex-end;
       text-align: right;
+    }
 
-      position: sticky;
-      top: var(--header-height);
+    span {
+      color: var(--color-text-muted);
     }
   }
 `

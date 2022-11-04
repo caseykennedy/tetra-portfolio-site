@@ -4,12 +4,6 @@
 import { css } from 'styled-components'
 import { breakpoint, textCrop } from './mixins'
 
-// NBInternationalPro Regular
-import AcidGroteskRegularEot from './fonts/AcidGrotesk-Regular.eot'
-import AcidGroteskRegularWoff2 from './fonts/AcidGrotesk-Regular.woff2'
-import AcidGroteskRegularWoff from './fonts/AcidGrotesk-Regular.woff'
-import AcidGroteskRegularOtf from './fonts/AcidGrotesk-Regular.otf'
-
 // NBInternationalPro Mono
 import NBInternationalProMonoEot from './fonts/NBInternationalPro-Mono.eot'
 import NBInternationalProMonoWoff2 from './fonts/NBInternationalPro-Mono.woff2'
@@ -62,11 +56,11 @@ const Typography = css`
 
     // line-height
     --body-line-height: 1.15;
-    --heading-line-height: 1.15;
+    --heading-line-height: 1;
 
     // letter-spacing
-    --heading-letter-spacing: 0em;
-    --body-letter-spacing: 0em;
+    --heading-letter-spacing: -1.75px;
+    --body-letter-spacing: 0px;
 
     // capital letters - used in combo with the lhCrop mixin
     --font-primary-capital-letter: 1;
@@ -94,19 +88,6 @@ const Typography = css`
     --text-xxl: calc(var(--text-xl) * var(--text-scale-ratio));
     --text-xxxl: calc(var(--text-xxl) * var(--text-scale-ratio));
     --text-xxxxl: calc(var(--text-xxxl) * var(--text-scale-ratio));
-  }
-
-  /* Acid Grotesk Regular */
-  @font-face {
-    font-family: 'AcidGrotesk';
-    src: url(${AcidGroteskRegularEot});
-    src: url(${AcidGroteskRegularWoff2}) format('woff2'),
-      url(${AcidGroteskRegularWoff}) format('woff'),
-      url(${AcidGroteskRegularOtf}) format('opentype'),
-      url(${AcidGroteskRegularEot}?#iefix) format('embedded-opentype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
   }
 
   /* NBInternationalPro Mono */
@@ -202,17 +183,26 @@ const Typography = css`
   h3,
   h4,
   h5 {
-    ${textCrop(1, 0.05, -0.05)}
+    ${textCrop(1, 0, -0.05)}
 
     color: var(--color-text-bright);
     font-family: var(--font-seconda);
     font-weight: var(--heading-font-weight);
+    letter-spacing: var(--heading-letter-spacing);
     line-height: var(--heading-line-height);
   }
 
   h1,
   .text-h1 {
     font-size: var(--text-xl);
+
+    @media ${breakpoint.tablet} {
+      font-size: var(--text-xxl);
+    }
+
+    @media ${breakpoint.desktop} {
+      font-size: var(--text-xxxl);
+    }
   }
 
   h2,

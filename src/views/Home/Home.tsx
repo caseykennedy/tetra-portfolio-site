@@ -38,13 +38,13 @@ import * as S from './styles.scss'
 const Home = () => (
   <S.Home>
     <Hero />
-    {/* <Marquee>
-      <div>web + app dev</div>
-      <div>ui + ux</div>
-      <div>design systems</div>
-      <div>wireframing</div>
-      <div>prototyping</div>
-    </Marquee> */}
+    <Marquee>
+      <div>something</div>
+      <div>statement</div>
+      <div>idea</div>
+      <div>ideaology</div>
+      <div>vision</div>
+    </Marquee>
 
     <Projects />
 
