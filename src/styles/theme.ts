@@ -23,7 +23,7 @@ const Theme = css`
     --radius-full: 50%;
 
     // transitions
-    --transition: 0.175s ease;
+    --transition: 0.175s ease-in-out 0s;
     --transition-all: all var(--transition);
 
     // box shadow

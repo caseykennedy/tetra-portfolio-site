@@ -41,7 +41,7 @@ export const Header = styled.header`
     }
 
     a {
-      color: var(--color-text-bright);
+      color: var(--color-text);
 
       &:hover {
         color: var(--color-text-muted);
@@ -58,7 +58,7 @@ export const Header = styled.header`
   .utils {
     display: flex;
     align-items: center;
-    gap: var(--gutter);
+    gap: var(--space-xxxs);
 
     button {
       display: flex;
@@ -73,14 +73,32 @@ export const Header = styled.header`
       &:hover {
         color: var(--color-text-muted);
       }
+
+      &.info-toggle {
+        display: flex;
+        place-content: center;
+        padding: var(--space-xxxxs) var(--space-xs);
+        border: var(--border);
+        border-color: var(--color-text);
+        border-radius: var(--radius);
+        /* font-size: var(--text-sm); */
+
+        &:hover {
+          background: var(--color-text);
+          color: var(--color-bg);
+        }
+      }
+
+      &.theme-toggle {
+        font-size: 2rem;
+        transform: rotate(180deg);
+        transition: 0.333s ease-in-out 0s;
+
+        &__active {
+          transform: rotate(0deg);
+        }
+      }
     }
-  }
-
-  .info-toggle {
-  }
-
-  .theme-toggle {
-    font-size: 1.5rem;
   }
 `
 

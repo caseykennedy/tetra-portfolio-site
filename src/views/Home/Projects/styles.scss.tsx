@@ -8,7 +8,6 @@ import { breakpoint } from '../../../styles/mixins'
 
 export const Projects = styled(motion.div)`
   display: flex;
-  padding: 0 var(--gutter);
   /* margin-bottom: var(--gutter); */
 
   .project-grid {

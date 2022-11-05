@@ -46,7 +46,9 @@ const Home = () => (
       <div>vision</div>
     </Marquee>
 
-    <Projects />
+    <Section>
+      <Projects />
+    </Section>
 
     {/* <Section>
       <StaticImage

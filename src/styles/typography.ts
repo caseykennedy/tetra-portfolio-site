@@ -162,6 +162,8 @@ const Typography = css`
 
   body,
   html {
+    ${textCrop(1, 0, -0.05)}
+
     color: var(--color-text);
     font-family: var(--font-primary);
     font-size: var(--text-base-size);
