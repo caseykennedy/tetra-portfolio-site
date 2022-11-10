@@ -11,12 +11,12 @@ const Buttons = css`
     --btn-primary-bg: var(--color-primary);
     --btn-primary-color: var(--color-bg);
 
-    --btn-height: 58px;
+    /* --btn-height: 58px; */
     --btn-padding-x: var(--space-md);
     --btn-padding-y: var(--space-sm);
     --btn-font-size: var(--text-root-size);
     --btn-font-weight: 600;
-    --btn-radius: var(--radius-sm);
+    --btn-radius: var(--radius-lg);
   }
 
   /* [data-theme='darkMode'] {
@@ -83,6 +83,7 @@ const Buttons = css`
   .btn--outline {
     background: var(--color-bg);
     border: var(--border);
+    border-color: var(--color-white);
     color: var(--color-text);
 
     svg path {

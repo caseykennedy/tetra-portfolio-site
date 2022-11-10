@@ -49,7 +49,7 @@ export const Services = styled(motion.div)`
 
         background: var(--color-bg);
         border: var(--border);
-        border-radius: var(--radius-sm);
+        border-radius: var(--radius);
 
         .integer {
           display: flex;

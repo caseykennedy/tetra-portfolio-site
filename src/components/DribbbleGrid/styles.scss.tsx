@@ -18,7 +18,7 @@ export const DribbbleGrid = styled.div`
   }
 
   img {
-    border-radius: var(--radius-sm);
+    border-radius: var(--radius);
   }
 `
 

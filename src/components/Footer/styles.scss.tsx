@@ -34,6 +34,7 @@ export const Footer = styled.footer`
   .message {
     div {
       font-size: var(--text-xl);
+      margin-bottom: var(--space-xl);
 
       @media ${breakpoint.tablet} {
         font-size: var(--text-xxxl);

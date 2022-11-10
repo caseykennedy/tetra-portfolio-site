@@ -28,7 +28,7 @@ export const Projects = styled(motion.div)`
     /* margin-bottom: var(--space-xl); */
 
     &__figure img {
-      border-radius: var(--radius-sm);
+      border-radius: var(--radius);
     }
 
     &__meta {
@@ -47,9 +47,11 @@ export const Projects = styled(motion.div)`
       /* width: 100%; */
 
       .title {
+        font-size: var(--text-md);
+        margin-bottom: var(--space-xs);
+
         span {
           /* color: var(--color-white); */
-          /* margin-left: var(--gutter); */
           transition: color var(--transition);
         }
       }
@@ -65,7 +67,7 @@ export const Projects = styled(motion.div)`
           place-items: center;
 
           /* border: var(--border); */
-          border-radius: var(--radius-sm);
+          border-radius: var(--radius);
           white-space: nowrap;
           transition: color var(--transition);
 

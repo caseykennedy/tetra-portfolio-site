@@ -56,7 +56,7 @@ export const Sites = styled(motion.div)`
           padding: var(--space-xxxs) var(--space-xxxs);
 
           /* border: var(--border); */
-          border-radius: var(--radius-sm);
+          border-radius: var(--radius);
           white-space: nowrap;
           transition: color var(--transition);
 

@@ -25,18 +25,19 @@ export const Team = styled(motion.div)`
     }
   }
 
-  .service-grid {
+  .team-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: auto;
     gap: var(--gutter);
+    margin-top: var(--space-xxxxl);
     width: 100%;
 
     @media ${breakpoint.tablet} {
       grid-template-columns: repeat(4, 1fr);
     }
 
-    .service {
+    .partner {
       .name {
         font-size: var(--text-base-size);
         font-weight: 700;
@@ -45,6 +46,8 @@ export const Team = styled(motion.div)`
 
       .title {
         color: var(--color-text-muted);
+        border-bottom: var(--border);
+        padding-bottom: var(--gutter);
       }
     }
   }

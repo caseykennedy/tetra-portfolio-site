@@ -58,15 +58,15 @@ const Team = () => {
   const nevadaTime = useDate()
   return (
     <S.Team>
-      <div className="service-grid">
-        <div className="title">
-          <p>
-            Team
-            <span>Working towards a decentralized future.</span>
-          </p>
-        </div>
+      <div className="title">
+        <p>
+          Team
+          <span>Working towards a decentralized future.</span>
+        </p>
+      </div>
+      <div className="team-grid">
         {data.map((service, idx) => (
-          <div className="service" key={idx}>
+          <div className="partner" key={idx}>
             <p className="name">
               {service.name}
               <span className="title">{service.title}</span>
