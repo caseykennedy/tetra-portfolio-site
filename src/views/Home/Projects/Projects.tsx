@@ -28,7 +28,7 @@ const imageVariants = {
     },
   },
   small: {
-    y: -11,
+    y: 0,
     transition: {
       y: { stiffness: 400, velocity: -400, duration: 0.25, ease: 'easeInOut' },
     },
@@ -118,7 +118,7 @@ const Projects = () => {
             className="project"
           >
             <Link to={`/projects/${item.slug}`}>
-              <motion.div variants={imageVariants}>
+              <motion.div variants={imageVariants} className="project__item">
                 <GatsbyImage
                   image={item.cover.childImageSharp.gatsbyImageData}
                   objectFit="cover"
@@ -126,22 +126,22 @@ const Projects = () => {
                   alt="alt"
                   className="project__figure"
                 />
+                <motion.div variants={itemVariants} className="project__meta">
+                  <div className="title">
+                    <span>
+                      <strong>{item.title}</strong>
+                    </span>
+                  </div>
+                  <motion.ul variants={listVariants}>
+                    {item.services.map((service, idx) => (
+                      <motion.li variants={itemVariants} key={idx}>
+                        {service}
+                      </motion.li>
+                    ))}
+                  </motion.ul>
+                </motion.div>
               </motion.div>
             </Link>
-            {/* <div className="project__meta">
-              <div className="title">
-                <span>
-                  <strong>{item.title}</strong>
-                </span>
-              </div>
-              <motion.ul variants={listVariants}>
-                {item.services.map((service, idx) => (
-                  <motion.li variants={itemVariants} key={idx}>
-                    {service}
-                  </motion.li>
-                ))}
-              </motion.ul>
-            </div> */}
           </motion.div>
         ))}
       </div>

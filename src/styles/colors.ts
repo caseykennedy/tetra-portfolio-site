@@ -14,8 +14,8 @@ const Colors = css`
 
     // background
     --color-bg-light: hsl(249, 11%, 19%);
-    --color-bg: hsl(249, 11%, 9%);
-    --color-bg-blur: hsla(249, 11%, 9%, 0.925);
+    --color-bg: hsl(249, 6%, 4%);
+    --color-bg-blur: hsla(249, 6%, 4%, 0.825);
     // typography
     --color-text: hsl(245, 8%, 78%);
     --color-text-muted: hsl(245, 8%, 58%);

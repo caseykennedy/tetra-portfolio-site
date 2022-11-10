@@ -1,29 +1,62 @@
-- title: 'Cannavative'
-  title_detail: 'Cannavative Cannabis Extracts'
-  slug: 'cannavative'
-  year: 2018
+- title: 'dWeb Foundation'
+  title_detail: 'Decentralize the internet.'
+  slug: 'dweb'
+  year: 2020
   desc: 'I needed a creative agency at the top of design thinking and leading edge in technical capabilities. core37 was a perfect match. They delivered the perfect end to end digital platform, on time and in full. I loved their creativity, their high quality standards and the strong partnership with my team.'
-  industry: 'cannabis'
-  category: 'design'
-  color: 'green'
-  images: 'cannavative'
-  cover: './cannavative/cover.png'
+  industry: 'blockchain'
+  category: 'case study'
+  color: 'purple'
+  images: 'dweb'
+  cover: './dweb/cover.png'
   services:
+    - branding
     - logo identity
-    - packaging
+    - ui design
+    - development
 
-- title: 'Bottle Barn'
-  title_detail: 'Bottle Barn Wine & Spirits'
-  slug: 'bottle-barn'
-  year: 2018
-  desc: Bottle Barn is Sonoma County's largest discount wine and spirits shop. Their goal was to bring their shop online. We designed them a humble identity and a custom Shopify theme and delivered a fully functional, ent to end digital platform to sell wine and keep in touch with their shoppers.
-  industry: 'ecommerce'
-  category: 'design + development'
+- title: 'Discoin'
+  title_detail: 'Cardano Disco Solaris Discoin'
+  slug: 'discoin'
+  year: 2022
+  desc: Cardano Discoin
+  industry: 'Blockchain'
+  category: 'case study'
   color: '#82726b'
-  images: 'bottle-barn'
-  cover: './bottle-barn/cover.png'
+  images: 'discoin'
+  cover: './discoin/cover.png'
   services:
+    - branding
+    - logo identity
+  website: 'discoin.com'
+
+- title: 'ArGo App'
+  title_detail: 'Deploy the new web.'
+  slug: 'argoapp'
+  year: 2020
+  desc: Bottle Barn is Sonoma County's largest discount wine and spirits shop. Their goal was to bring their shop online. We designed them a humble identity and a custom Shopify theme and delivered a fully functional, ent to end digital platform to sell wine and keep in touch with their shoppers.
+  industry: 'Blockchain'
+  category: 'case study'
+  color: '#82726b'
+  images: 'argoapp'
+  cover: './argoapp/cover.png'
+  services:
+    - branding
     - logo identity
     - ui + ux
-    - dev
-  website: 'bottlebarn.com'
+  website: 'argoapp.com'
+
+- title: 'Jael Cartel'
+  title_detail: 'The Jael Cartel'
+  slug: 'jael'
+  year: 2022
+  desc: The JAEL Cartel.
+  industry: 'Blockchain'
+  category: 'case study'
+  color: '#82726b'
+  images: 'jael'
+  cover: './jael/cover.png'
+  services:
+    - branding
+    - logo identity
+    - event space
+  website: 'jaelcartel.com'

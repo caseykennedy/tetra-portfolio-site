@@ -3,33 +3,40 @@
 // ___________________________________________________________________
 
 import styled from 'styled-components'
+import { breakpoint } from '../../styles/mixins'
 
 // ___________________________________________________________________
 
 export const Footer = styled.footer`
   display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: space-between;
-
-  position: sticky;
-  top: 0;
-
+  flex-flow: column nowrap;
+  gap: var(--gutter);
+  border-top: var(--border);
+  min-height: 75vh;
   padding: var(--gutter);
-  height: 100vh;
-  width: 4rem;
 
-  background: var(--color-text);
-  border-left: var(--border);
-  color: var(--color-bg);
+  position: relative;
+  z-index: 1;
 
-  a,
-  .info {
-    svg path {
-      fill: var(--color-bg);
+  .title {
+    flex: 1;
 
-      &:hover {
-        fill: var(--color-white);
+    p {
+      max-width: 20ch;
+
+      span {
+        color: var(--color-text-muted);
+        display: block;
+      }
+    }
+  }
+
+  .message {
+    div {
+      font-size: var(--text-xl);
+
+      @media ${breakpoint.tablet} {
+        font-size: var(--text-xxxl);
       }
     }
   }

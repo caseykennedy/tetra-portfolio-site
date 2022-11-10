@@ -3,11 +3,9 @@
 // ___________________________________________________________________
 
 import * as React from 'react'
-import { motion } from 'framer-motion'
 import { Canvas } from '@react-three/fiber'
 
 // Components
-import Icon from '../../../components/Icons'
 import TetraGeo from '../../../components/TetraGeo'
 
 // Hooks

@@ -16,8 +16,8 @@ export const Header = styled.header`
   align-items: center;
   justify-content: space-between;
 
-  position: sticky;
-  top: 0;
+  /* position: sticky;
+  top: 0; */
 
   padding: var(--gutter);
   /* padding-bottom: var(--space-xxxl); */

@@ -24,10 +24,6 @@ export const Home = styled.main`
     color: var(--color-primary);
   }
 
-  .lead {
-    color: var(--color-text-muted);
-  }
-
   .list-title {
     margin-top: var(--space-xxl);
   }

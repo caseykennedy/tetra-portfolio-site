@@ -31,7 +31,7 @@ const DribbbleGrid = () => {
             name
             childImageSharp {
               gatsbyImageData(
-                aspectRatio: 1.444
+                aspectRatio: 1.675
                 backgroundColor: ""
                 formats: WEBP
                 layout: FULL_WIDTH

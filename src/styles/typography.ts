@@ -47,7 +47,7 @@ const Typography = css`
 
     // font size
     --text-root-size: 1rem;
-    --text-base-size: 1.15rem; // body font-size
+    --text-base-size: 1rem; // body font-size
     --text-scale-ratio: 1.25; // multiplier used to generate the type scale values 👇
 
     // font weight
@@ -59,7 +59,7 @@ const Typography = css`
     --heading-line-height: 1;
 
     // letter-spacing
-    --heading-letter-spacing: -1.75px;
+    --heading-letter-spacing: -0.25px;
     --body-letter-spacing: 0px;
 
     // capital letters - used in combo with the lhCrop mixin
@@ -210,7 +210,10 @@ const Typography = css`
   h2,
   .text-h2 {
     font-size: var(--text-lg);
-    margin-bottom: var(--space-md);
+
+    @media ${breakpoint.tablet} {
+      font-size: var(--text-xl);
+    }
   }
 
   h3,
@@ -246,12 +249,15 @@ const Typography = css`
     line-height: var(--body-line-height);
 
     &:not(:last-child) {
-      margin-bottom: var(--gutter);
+      margin-bottom: var(--space-md);
     }
 
     &.lead {
-      color: var(--color-text);
       font-size: var(--text-lg);
+    }
+
+    &.small {
+      font-size: var(--text-base-size);
     }
   }
 
@@ -325,6 +331,7 @@ const Typography = css`
   }
 
   ul {
+    color: var(--color-text-muted);
   }
 `
 

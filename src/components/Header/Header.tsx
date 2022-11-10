@@ -29,13 +29,13 @@ const Header = () => {
         </div>
 
         <div className="utils">
-          <button
+          {/* <button
             type="button"
             onClick={toggleMenu}
             className="btn btn-outline info-toggle"
           >
             tl;dr
-          </button>
+          </button> */}
           <button
             type="button"
             onClick={toggle}

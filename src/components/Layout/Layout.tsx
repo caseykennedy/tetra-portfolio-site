@@ -44,6 +44,7 @@ const Layout = ({ children }: LayoutProps) => {
         {/* <SmoothScroll>{children}</SmoothScroll> */}
         {children}
       </S.Content>
+      <Footer />
     </S.Wrapper>
   )
 }

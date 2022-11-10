@@ -11,11 +11,9 @@ import Marquee from '../../components/Marquee'
 // Sections
 import Hero from './Hero'
 import Intro from './Intro'
-import Aim from './Aim'
-import Approach from './Approach'
 import Projects from './Projects'
-import Sites from './Sites'
-import Outro from './Outro'
+import Services from './Services'
+import Team from './Team'
 
 // Styles
 import * as S from './styles.scss'
@@ -46,26 +44,25 @@ const Home = () => (
       <div>vision</div>
     </Marquee>
 
-    <Section>
+    <Section border={true}>
       <Projects />
     </Section>
 
-    {/* <Section>
-      <StaticImage
-        src="../../../static/wireframe3.jpg"
-        alt="A dinosaur"
-        placeholder="blurred"
-        objectFit="cover"
-        aspectRatio={2}
-      />
-    </Section> */}
-    {/* <Approach /> */}
-    {/* <Process /> */}
-    <Section pt="3px">
+    <Section bg="var(--color-bg-blur)" border={true}>
+      <Intro />
+    </Section>
+
+    <Section bg="var(--color-bg-blur)" border={true}>
+      <Services />
+    </Section>
+
+    <Section bg="var(--color-bg-blur)" border={true}>
+      <Team />
+    </Section>
+
+    <Section border={true}>
       <DribbbleGrid />
     </Section>
-    {/* <Sites /> */}
-    {/* <Outro /> */}
   </S.Home>
 )
 

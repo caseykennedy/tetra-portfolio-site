@@ -18,20 +18,18 @@ const handshakeHref = 'https://handshake.org'
 
 const Footer = () => (
   <S.Footer>
-    {/* <div className="info">
-      <Icon name="plus" />
+    <div className="message">
+      <div>Tell us about your project.</div>
+      <a href="/#" className="btn btn--outline">
+        email
+      </a>
+    </div>
+    {/* <div className="title">
+      <p>
+        Approach
+        <span>Our process is casual and conversational.</span>
+      </p>
     </div> */}
-    <a href={twitterHref} target="_blank" rel="noreferrer" className="twitter">
-      <Icon name="twitter" />
-    </a>
-    <a
-      href={handshakeHref}
-      target="_blank"
-      rel="noreferrer"
-      className="handshake"
-    >
-      <Icon name="handshake" />
-    </a>
   </S.Footer>
 )
 
