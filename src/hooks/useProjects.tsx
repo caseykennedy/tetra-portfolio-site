@@ -20,7 +20,31 @@ const useProjects = () => {
             services
             slug
             title
-            title_detail
+            tagline
+            website
+            year
+            cover {
+              childImageSharp {
+                gatsbyImageData(
+                  aspectRatio: 1.5
+                  layout: FULL_WIDTH
+                  formats: [AUTO, AVIF, WEBP]
+                  placeholder: DOMINANT_COLOR
+                )
+              }
+            }
+          }
+          previous {
+            category
+            color
+            desc
+            id
+            images
+            industry
+            services
+            slug
+            title
+            tagline
             website
             year
             cover {
@@ -35,7 +59,28 @@ const useProjects = () => {
             }
           }
           next {
+            category
+            color
+            desc
             id
+            images
+            industry
+            services
+            slug
+            title
+            tagline
+            website
+            year
+            cover {
+              childImageSharp {
+                gatsbyImageData(
+                  aspectRatio: 1.5
+                  layout: FULL_WIDTH
+                  formats: [AUTO, AVIF, WEBP]
+                  placeholder: DOMINANT_COLOR
+                )
+              }
+            }
           }
         }
       }

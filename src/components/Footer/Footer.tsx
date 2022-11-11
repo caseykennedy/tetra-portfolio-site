@@ -32,11 +32,11 @@ const Footer = () => {
           </a>
         </div>
         <div className="contact__details">
-          <div>
+          {/* <div>
             west coast based
             <br />
             <span>{nevadaTime}</span>
-          </div>
+          </div> */}
           <div>
             email
             <br />

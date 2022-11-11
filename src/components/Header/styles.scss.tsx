@@ -20,8 +20,8 @@ export const Header = styled.header`
   top: 0; */
 
   padding: var(--gutter);
-  /* padding-bottom: var(--space-xxxl); */
-  height: var(--header-height);
+  padding-bottom: var(--space-xl);
+  /* height: var(--header-height); */
   width: 100%;
   z-index: 9;
 
@@ -90,7 +90,7 @@ export const Header = styled.header`
       }
 
       &.theme-toggle {
-        font-size: 1.75rem;
+        font-size: 2rem;
         transform: rotate(180deg);
         transition: 0.333s ease-in-out 0s;
 

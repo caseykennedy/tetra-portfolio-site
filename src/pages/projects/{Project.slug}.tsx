@@ -19,7 +19,7 @@ const ProjectPage = (props: ProjectShape) => {
     <>
       <SEO
         pathname={project.slug}
-        title={`${project.title_detail} | tetra`}
+        title={`${project.tagline} | tetra`}
         desc={project.desc}
         node={project.parent}
       />
@@ -62,7 +62,7 @@ export const query = graphql`
       services
       slug
       title
-      title_detail
+      tagline
       website
     }
     images: allFile(filter: { relativeDirectory: { eq: $slug } }) {

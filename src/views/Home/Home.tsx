@@ -36,7 +36,7 @@ import * as S from './styles.scss'
 const Home = () => (
   <S.Home>
     <Hero />
-    <Marquee>
+    <Marquee speed={50}>
       <div>something</div>
       <div>statement</div>
       <div>idea</div>

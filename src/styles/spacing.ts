@@ -16,7 +16,7 @@ const Spacing = css`
     --gutter: var(--space-sm);
 
     // Header
-    --header-height: 50px;
+    /* --header-height: 75px; */
 
     @media ${breakpoint.tablet} {
       /* --gutter: var(--space-md); */

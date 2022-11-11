@@ -11,7 +11,7 @@ export const Footer = styled.footer`
   display: flex;
   flex-flow: column nowrap;
   border-top: var(--border);
-  min-height: 67vh;
+  min-height: 70vh;
 
   position: relative;
   z-index: 1;
@@ -73,10 +73,9 @@ export const Footer = styled.footer`
     align-items: flex-end;
     border-top: var(--border);
     padding: var(--gutter);
-    padding-bottom: var(--space-xl);
 
     @media ${breakpoint.tablet} {
-      padding-bottom: var(--space-xxxxl);
+      padding-bottom: var(--space-xxl);
     }
 
     &__legal {

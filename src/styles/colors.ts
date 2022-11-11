@@ -33,7 +33,7 @@ const Colors = css`
     --color-bg-blur: hsla(245, 8%, 92%, 0.875);
     // typography
     --color-text: hsl(270, 5%, 20%);
-    --color-text-muted: hsl(245, 8%, 38%);
+    --color-text-muted: hsl(245, 8%, 40%);
     --color-text-bright: hsl(249, 11%, 6%);
     // border
     --color-border: hsl(245, 8%, 80%);

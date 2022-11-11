@@ -22,9 +22,9 @@ export const Intro = styled(motion.div)`
     position: relative;
 
     p {
-      max-width: 20ch;
+      max-width: 18ch;
       position: sticky;
-      top: calc(var(--header-height) + var(--gutter));
+      top: var(--gutter);
 
       span {
         color: var(--color-text-muted);

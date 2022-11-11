@@ -29,7 +29,8 @@ export type DribbbleShape = {
 // ___________________________________________________________________
 
 export type ProjectShapeProject = {
-  title_detail: string
+  id: string
+  tagline: string
   title: string
   color: string
   category: string
@@ -38,7 +39,7 @@ export type ProjectShapeProject = {
   services: string[]
   slug: string
   website: string
-  year: number
+  year: string
   parent: {
     modifiedTime: string
     birthTime: string
@@ -63,28 +64,9 @@ export type ProjectShape = {
 export interface IProjects {
   projects: {
     edges: {
-      node: {
-        category: string
-        color: string
-        desc: string
-        id: string
-        images: string
-        industry: string
-        services: string[]
-        slug: string
-        title: string
-        title_detail: string
-        website: string
-        year: number
-        cover: {
-          childImageSharp: {
-            gatsbyImageData: IGatsbyImageData
-          }
-        }
-      }
-      next: {
-        id: string
-      }
+      node: ProjectShapeProject
+      previous: ProjectShapeProject
+      next: ProjectShapeProject
     }[]
   }
 }

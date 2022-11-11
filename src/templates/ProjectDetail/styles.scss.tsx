@@ -9,31 +9,51 @@ import { breakpoint } from '../../styles/mixins'
 export const ProjectDetail = styled.div`
   display: flex;
   flex-flow: column nowrap;
-  margin-top: var(--space-xxxxl);
-  padding: var(--gutter);
   width: 100%;
 
-  .intro {
+  h1 span {
+    display: block;
+    color: var(--color-text-muted);
+    font-size: var(--text-base-size);
+  }
+
+  .details {
     display: flex;
-    flex-flow: row nowrap;
-    align-items: flex-end;
-    justify-content: space-between;
-    margin-bottom: var(--gutter);
-  }
+    flex-flow: column nowrap;
 
-  .study {
-    margin-top: var(--space-xxxxl);
-  }
+    @media ${breakpoint.tablet} {
+      flex-flow: row nowrap;
+    }
 
-  .pill {
-    display: inline-block;
-    /* border: var(--border);
-    border-color: alpha(var(--color-white), 0.25);
-    border-radius: var(--radius); */
-    font-size: var(--text-sm);
-    margin-right: var(--space-sm);
-    /* padding: var(--space-xxxs) var(--space-sm); */
-    width: fit-content;
+    & > * {
+      flex: 1;
+    }
+
+    h2,
+    p {
+      margin-bottom: var(--space-xxxxl);
+    }
+
+    &__meta {
+      display: flex;
+      flex-flow: row nowrap;
+      gap: var(--gutter);
+
+      &__col {
+        flex: 1;
+        display: flex;
+        flex-flow: column nowrap;
+
+        & > * {
+          margin-bottom: var(--space-lg);
+
+          span {
+            display: block;
+            color: var(--color-text-muted);
+          }
+        }
+      }
+    }
   }
 `
 
@@ -45,5 +65,9 @@ export const Gallery = styled.div`
 
   @media ${breakpoint.tablet} {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  img {
+    border-radius: var(--radius);
   }
 `
