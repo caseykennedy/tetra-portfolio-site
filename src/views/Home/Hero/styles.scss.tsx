@@ -13,7 +13,7 @@ export const Hero = styled.div`
   @media ${breakpoint.tablet} {
     flex-flow: row nowrap;
     justify-content: stretch;
-    min-height: 75vh;
+    min-height: 72vh;
   }
 
   .billboard {
