@@ -10,9 +10,8 @@ import { breakpoint } from '../../styles/mixins'
 export const Footer = styled.footer`
   display: flex;
   flex-flow: column nowrap;
-  gap: var(--gutter);
   border-top: var(--border);
-  min-height: 58vh;
+  min-height: 67vh;
 
   position: relative;
   z-index: 1;
@@ -22,6 +21,7 @@ export const Footer = styled.footer`
     display: flex;
     flex-flow: column nowrap;
     padding: var(--gutter);
+    padding-bottom: var(--space-xxxxl);
 
     @media ${breakpoint.tablet} {
       flex-flow: row nowrap;
@@ -33,23 +33,28 @@ export const Footer = styled.footer`
 
     &__cta {
       flex: 2;
-      font-size: var(--text-xxl);
 
-      @media ${breakpoint.tablet} {
-        font-size: var(--text-xxxl);
-      }
-
-      div {
-        margin-bottom: var(--space-md);
+      h2 {
+        margin-bottom: var(--space-lg);
       }
     }
 
     &__details {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: flex-end;
       text-align: right;
 
-      div {
-        margin-bottom: var(--gutter);
+      @media ${breakpoint.tablet} {
+        justify-content: flex-start;
       }
+
+      div {
+        &:first-child {
+          margin-bottom: var(--gutter);
+        }
+      }
+
       span {
         color: var(--color-text-muted);
       }
@@ -68,7 +73,11 @@ export const Footer = styled.footer`
     align-items: flex-end;
     border-top: var(--border);
     padding: var(--gutter);
-    padding-bottom: var(--space-xxxxl);
+    padding-bottom: var(--space-xl);
+
+    @media ${breakpoint.tablet} {
+      padding-bottom: var(--space-xxxxl);
+    }
 
     &__legal {
       flex: 2;

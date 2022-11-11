@@ -6,7 +6,7 @@ import { breakpoint } from '../../../styles/mixins'
 export const Hero = styled.div`
   display: flex;
   flex-flow: column nowrap;
-  min-height: 70vh;
+  min-height: 67vh;
   position: relative;
   z-index: 1;
 
