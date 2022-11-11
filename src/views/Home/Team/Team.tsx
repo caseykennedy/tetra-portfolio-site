@@ -69,7 +69,7 @@ const Team = () => {
           <div className="partner" key={idx}>
             <p className="name">
               {service.name}
-              <span className="title">{service.title}</span>
+              <span className="position">{service.title}</span>
             </p>
             <p className="small">{service.bio}</p>
             <p className="small">

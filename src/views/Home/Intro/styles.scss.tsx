@@ -18,6 +18,7 @@ export const Intro = styled(motion.div)`
     flex: 1;
     display: flex;
     flex-flow: column nowrap;
+    margin-bottom: var(--space-xxxxl);
     position: relative;
 
     p {

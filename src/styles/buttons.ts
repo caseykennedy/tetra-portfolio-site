@@ -65,10 +65,10 @@ const Buttons = css`
   }
 
   .btn--primary {
-    /* background: var(--color-text); */
+    background: var(--color-text);
 
     &:hover {
-      /* background: var(--color-text-muted); */
+      background: var(--color-text-muted);
     }
   }
 

@@ -13,6 +13,7 @@ export const Team = styled(motion.div)`
     flex: 1;
     display: flex;
     flex-flow: column nowrap;
+    margin-bottom: var(--space-xxxxl);
     position: relative;
 
     p {
@@ -30,7 +31,6 @@ export const Team = styled(motion.div)`
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: auto;
     gap: var(--gutter);
-    margin-top: var(--space-xxxxl);
     width: 100%;
 
     @media ${breakpoint.tablet} {
@@ -44,9 +44,10 @@ export const Team = styled(motion.div)`
         text-transform: capitalize;
       }
 
-      .title {
-        color: var(--color-text-muted);
+      .position {
         border-bottom: var(--border);
+        color: var(--color-text-muted);
+        display: block;
         padding-bottom: var(--gutter);
       }
     }

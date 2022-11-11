@@ -5,12 +5,13 @@ export const DribbbleGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: auto;
-  gap: var(--gutter);
+  gap: var(--space-xxxs);
 
   width: 100%;
 
   @media ${breakpoint.tablet} {
     grid-template-columns: repeat(3, 1fr);
+    gap: var(--gutter);
   }
 
   @media ${breakpoint.desktop} {

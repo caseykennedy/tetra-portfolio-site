@@ -1,13 +1,10 @@
 // Projects:
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-
-// types
-import { ProjectShapeProject } from '../../../types'
 
 // Components
 // import Icon from '../../../components/Icons'

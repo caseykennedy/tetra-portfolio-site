@@ -55,7 +55,12 @@ const Hero = () => {
             <div>
               contact
               <br />
-              <a href={mailTo} target="_blank" rel="noreferrer">
+              <a
+                href={mailTo}
+                target="_blank"
+                rel="noreferrer"
+                className="link"
+              >
                 info@
               </a>
             </div>

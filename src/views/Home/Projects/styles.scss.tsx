@@ -14,12 +14,13 @@ export const Projects = styled(motion.div)`
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-auto-rows: auto;
-    gap: var(--gutter);
+    gap: var(--space-xxxs);
 
     width: 100%;
 
     @media ${breakpoint.tablet} {
       grid-template-columns: repeat(2, 1fr);
+      gap: var(--gutter);
     }
   }
 
@@ -38,7 +39,7 @@ export const Projects = styled(motion.div)`
       backdrop-filter: blur(7px);
       background-color: var(--color-bg-blur);
       border-radius: var(--radius-sm);
-      padding: var(--space-lg);
+      padding: var(--gutter);
 
       position: absolute;
       top: var(--gutter);
@@ -48,7 +49,7 @@ export const Projects = styled(motion.div)`
 
       .title {
         font-size: var(--text-md);
-        margin-bottom: var(--space-xs);
+        margin-bottom: var(--space-xxxs);
 
         span {
           /* color: var(--color-white); */

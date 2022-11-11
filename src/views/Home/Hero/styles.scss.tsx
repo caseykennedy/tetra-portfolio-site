@@ -6,13 +6,14 @@ import { breakpoint } from '../../../styles/mixins'
 export const Hero = styled.div`
   display: flex;
   flex-flow: column nowrap;
-  min-height: 75vh;
+  min-height: 70vh;
   position: relative;
   z-index: 1;
 
   @media ${breakpoint.tablet} {
     flex-flow: row nowrap;
     justify-content: stretch;
+    min-height: 75vh;
   }
 
   .billboard {
@@ -50,7 +51,12 @@ export const Hero = styled.div`
       display: flex;
       flex-flow: column nowrap;
       align-items: flex-end;
+      justify-content: flex-end;
       text-align: right;
+
+      @media ${breakpoint.tablet} {
+        justify-content: flex-start;
+      }
     }
 
     span {

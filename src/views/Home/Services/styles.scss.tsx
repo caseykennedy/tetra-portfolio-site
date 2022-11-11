@@ -13,6 +13,7 @@ export const Services = styled(motion.div)`
     flex: 1;
     display: flex;
     flex-flow: column nowrap;
+    margin-bottom: var(--space-xxxxl);
     position: relative;
 
     p {
@@ -30,8 +31,6 @@ export const Services = styled(motion.div)`
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: auto;
     gap: var(--gutter);
-
-    margin-top: var(--space-xxxxl);
     width: 100%;
 
     @media ${breakpoint.tablet} {

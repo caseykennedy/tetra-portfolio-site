@@ -12,15 +12,19 @@ const Theme = css`
     --border: 1px solid var(--color-border);
 
     // Icons
-    --icon-size: 1.25rem;
+    --icon-size: 1rem;
 
     // Radius
-    --radius: 1rem; // border radius base size
+    --radius: 0.75rem; // border radius base size
     --radius-xs: calc(var(--radius) / 3);
     --radius-sm: calc(var(--radius) / 2);
     --radius-md: calc(var(--radius) * 2);
     --radius-lg: calc(var(--radius) * 4);
     --radius-full: 50%;
+
+    @media ${breakpoint.tablet} {
+      --radius: 1rem; // border radius base size
+    }
 
     // transitions
     --transition: 0.175s ease-in-out 0s;
@@ -33,9 +37,6 @@ const Theme = css`
       1px 0.9px 1.25px rgba(0, 0, 0, 0.05), 0 3.5px 6px rgba(0, 0, 0, 0.1);
     --shadow-md: 0 0.9px 1.5px rgba(0, 0, 0, 0.03),
       0 3.1px 5.5px rgba(0, 0, 0, 0.08), 0 14px 25px rgba(0, 0, 0, 0.12);
-
-    @media ${breakpoint.tablet} {
-    }
   }
 
   /* @supports (--css: variables) {
@@ -51,8 +52,8 @@ const Theme = css`
     align-items: center;
     justify-content: center;
     // font-family: 'fontName';
-    height: var(--icon-xs);
-    width: var(--icon-xs);
+    height: var(--icon-size);
+    width: var(--icon-size);
   }
 `
 

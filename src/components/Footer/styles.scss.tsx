@@ -12,32 +12,78 @@ export const Footer = styled.footer`
   flex-flow: column nowrap;
   gap: var(--gutter);
   border-top: var(--border);
-  min-height: 75vh;
+  min-height: 65vh;
   padding: var(--gutter);
 
   position: relative;
   z-index: 1;
 
-  .title {
+  & > * {
     flex: 1;
+  }
 
-    p {
-      max-width: 20ch;
+  .contact {
+    display: flex;
+    flex-flow: column nowrap;
 
+    @media ${breakpoint.tablet} {
+      flex-flow: row nowrap;
+    }
+
+    & > * {
+      flex: 1;
+    }
+
+    &__cta {
+      flex: 2;
+      font-size: var(--text-xl);
+
+      @media ${breakpoint.tablet} {
+        font-size: var(--text-xxxl);
+      }
+
+      div {
+        margin-bottom: var(--space-md);
+      }
+    }
+
+    &__details {
+      text-align: right;
+
+      div {
+        margin-bottom: var(--gutter);
+      }
       span {
         color: var(--color-text-muted);
-        display: block;
+      }
+    }
+
+    .btn {
+      svg {
+        transform: rotate(-90deg);
+        /* width: 18px; */
       }
     }
   }
 
-  .message {
-    div {
-      font-size: var(--text-xl);
-      margin-bottom: var(--space-xl);
+  .info {
+    display: flex;
+    align-items: flex-end;
+
+    &__legal {
+      flex: 2;
+    }
+
+    &__links {
+      flex: 1;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: flex-end;
+      gap: var(--space-sm);
+      text-align: right;
 
       @media ${breakpoint.tablet} {
-        font-size: var(--text-xxxl);
+        flex-flow: row nowrap;
       }
     }
   }
