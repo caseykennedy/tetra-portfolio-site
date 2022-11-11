@@ -31,7 +31,7 @@ export const Hero = styled.div`
 
       position: sticky;
       top: var(--gutter);
-      max-inline-size: 72ch;
+      max-inline-size: 75ch;
 
       /* &:first-child {
         border-bottom: var(--border);
@@ -75,8 +75,4 @@ export const Tetra = styled.div`
   height: 100%;
   width: 100%;
   z-index: 0;
-
-  /* div {
-    height: 80% !important;
-  } */
 `

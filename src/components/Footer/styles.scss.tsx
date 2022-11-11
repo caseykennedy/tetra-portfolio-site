@@ -12,19 +12,16 @@ export const Footer = styled.footer`
   flex-flow: column nowrap;
   gap: var(--gutter);
   border-top: var(--border);
-  min-height: 65vh;
-  padding: var(--gutter);
+  min-height: 58vh;
 
   position: relative;
   z-index: 1;
 
-  & > * {
-    flex: 1;
-  }
-
   .contact {
+    flex: 1;
     display: flex;
     flex-flow: column nowrap;
+    padding: var(--gutter);
 
     @media ${breakpoint.tablet} {
       flex-flow: row nowrap;
@@ -36,7 +33,7 @@ export const Footer = styled.footer`
 
     &__cta {
       flex: 2;
-      font-size: var(--text-xl);
+      font-size: var(--text-xxl);
 
       @media ${breakpoint.tablet} {
         font-size: var(--text-xxxl);
@@ -69,6 +66,8 @@ export const Footer = styled.footer`
   .info {
     display: flex;
     align-items: flex-end;
+    border-top: var(--border);
+    padding: var(--gutter);
 
     &__legal {
       flex: 2;

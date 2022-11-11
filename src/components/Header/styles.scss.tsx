@@ -90,7 +90,7 @@ export const Header = styled.header`
       }
 
       &.theme-toggle {
-        font-size: 2rem;
+        font-size: 1.75rem;
         transform: rotate(180deg);
         transition: 0.333s ease-in-out 0s;
 
