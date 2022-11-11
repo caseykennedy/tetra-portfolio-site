@@ -68,6 +68,7 @@ export const Footer = styled.footer`
     align-items: flex-end;
     border-top: var(--border);
     padding: var(--gutter);
+    padding-bottom: var(--space-xxxxl);
 
     &__legal {
       flex: 2;
