@@ -2,6 +2,8 @@
 
 import * as React from 'react'
 import { motion } from 'framer-motion'
+import SwiperCore, { Pagination } from 'swiper'
+import { Swiper, SwiperSlide } from 'swiper/react'
 
 // Components
 import Icon from '../../../components/Icons'
@@ -11,6 +13,8 @@ import useDate from '../../../hooks/useDate'
 
 // Styles
 import * as S from './styles.scss'
+import 'swiper/css'
+import 'swiper/css/pagination'
 
 // ___________________________________________________________________
 
@@ -39,8 +43,7 @@ const data = [
       'Brand guidelines',
       'Brand identity',
       'Campaign design',
-      'Design systems',
-      'Motion design',
+      'Brand design systems',
       'Print & packaging design',
       'Type design',
       'Verbal identity',
@@ -53,9 +56,10 @@ const data = [
     capabilities: [
       'Digital design systems',
       'Information architecture',
-      'UI+UX design',
+      'ui+ux design',
       'Product design',
-      'Wireframing / Prototyping',
+      'Wireframing',
+      'Prototyping',
       'User journey mapping',
     ],
   },
@@ -91,6 +95,44 @@ const data = [
 //     ))}
 //   </>
 // )
+
+SwiperCore.use([Pagination])
+
+const ServiceSwiper = () => (
+  <Swiper
+    slidesPerView="auto"
+    // centeredSlides={true}
+    spaceBetween={12}
+    breakpoints={{
+      '640': {
+        slidesPerView: 2,
+      },
+      '768': {
+        slidesPerView: 3,
+      },
+      '1024': {
+        slidesPerView: 4,
+      },
+    }}
+  >
+    {data.map((service, idx) => (
+      <SwiperSlide key={idx}>
+        <div className="service">
+          <div className="service__figure">
+            <div className="integer">{service.id}</div>
+            <div className="name">{service.discipline}</div>
+          </div>
+          <p className="small">{service.description}</p>
+          <ul>
+            {service.capabilities.map((cap, id) => (
+              <li key={id}>{cap}</li>
+            ))}
+          </ul>
+        </div>
+      </SwiperSlide>
+    ))}
+  </Swiper>
+)
 
 const Services = () => {
   const nevadaTime = useDate()

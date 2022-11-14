@@ -16,8 +16,9 @@ import Icon from '../Icons'
 // ___________________________________________________________________
 
 const mailTo = 'mailto:info@tetrashapes.com'
-const twitterHref = 'https://twitter.com/tetrashapes'
-const handshakeHref = 'https://handshake.org'
+const twitterURL = 'https://twitter.com/tetrashapes'
+const handshakeURL = 'https://handshake.org'
+const discordURL = 'https://discord.gg/8qZ7Y4'
 
 const Footer = () => {
   const nevadaTime = useDate()
@@ -52,7 +53,7 @@ const Footer = () => {
         </div>
         <div className="info__links">
           <a
-            href="https://github.com/caseykennedy"
+            href={twitterURL}
             target="_blank"
             rel="noreferrer"
             className="link"
@@ -60,7 +61,7 @@ const Footer = () => {
             twitter
           </a>
           <a
-            href="https://github.com/caseykennedy"
+            href={discordURL}
             target="_blank"
             rel="noreferrer"
             className="link"
@@ -68,7 +69,7 @@ const Footer = () => {
             discord
           </a>
           <a
-            href="https://github.com/caseykennedy"
+            href={handshakeURL}
             target="_blank"
             rel="noreferrer"
             className="link"

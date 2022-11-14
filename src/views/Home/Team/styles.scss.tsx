@@ -28,16 +28,27 @@ export const Team = styled(motion.div)`
 
   .team-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-auto-rows: auto;
-    gap: var(--gutter);
+    gap: var(--space-xxl);
     width: 100%;
 
     @media ${breakpoint.tablet} {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--gutter);
+    }
+
+    @media ${breakpoint.desktop} {
+      grid-template-columns: repeat(3, 1fr);
     }
 
     .partner {
+      @media ${breakpoint.tablet} {
+        &:first-child {
+          padding-bottom: var(--space-xxl);
+        }
+      }
+
       .name {
         font-size: var(--text-base-size);
         font-weight: 700;

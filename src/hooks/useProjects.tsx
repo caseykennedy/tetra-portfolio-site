@@ -35,18 +35,10 @@ const useProjects = () => {
             }
           }
           previous {
-            category
-            color
             desc
             id
-            images
-            industry
-            services
             slug
             title
-            tagline
-            website
-            year
             cover {
               childImageSharp {
                 gatsbyImageData(
@@ -59,18 +51,10 @@ const useProjects = () => {
             }
           }
           next {
-            category
-            color
             desc
             id
-            images
-            industry
-            services
             slug
             title
-            tagline
-            website
-            year
             cover {
               childImageSharp {
                 gatsbyImageData(

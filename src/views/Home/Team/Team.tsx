@@ -19,7 +19,7 @@ const data = [
     id: 0,
     name: `casey`,
     title: `technology`,
-    bio: `Casey is just this guy, you know? Designer, developer, aspiring time-traveler. Actively exploring visual design, technology and inner space ✌️`,
+    bio: `Casey is just this guy, you know? Designer, developer, friend. Actively exploring visual design, technology and inner space ✌️`,
   },
   {
     id: 1,
@@ -31,7 +31,7 @@ const data = [
     id: 2,
     name: `taylor`,
     title: `strategy`,
-    bio: `Some some some.`,
+    bio: `Chotai, chotai! Hogmog, ongei, onskii!`,
   },
 ]
 
@@ -73,7 +73,7 @@ const Team = () => {
             </p>
             <p className="small">{service.bio}</p>
             <p className="small">
-              <a href="/#" target="_blank" rel="nofollow">
+              <a href="/#" target="_blank" rel="nofollow" className="link">
                 LinkedIn
               </a>
             </p>

@@ -270,6 +270,7 @@ const Typography = css`
     }
 
     &.link {
+      cursor: ne-resize;
       color: var(--color-text-muted);
       text-decoration: none;
       transition: var(--transition-all);

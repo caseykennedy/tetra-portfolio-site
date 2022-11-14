@@ -28,12 +28,17 @@ export const Services = styled(motion.div)`
 
   .service-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-auto-rows: auto;
-    gap: var(--gutter);
+    gap: var(--space-lg);
     width: 100%;
 
     @media ${breakpoint.tablet} {
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--gutter);
+    }
+
+    @media ${breakpoint.desktop} {
       grid-template-columns: repeat(4, 1fr);
     }
 
@@ -44,11 +49,15 @@ export const Services = styled(motion.div)`
         justify-content: space-between;
         margin-bottom: var(--gutter);
         padding: var(--gutter);
-        height: 150px;
+        height: 75px;
 
         background: var(--color-bg);
         border: var(--border);
         border-radius: var(--radius);
+
+        @media ${breakpoint.tablet} {
+          height: 150px;
+        }
 
         .integer {
           display: flex;

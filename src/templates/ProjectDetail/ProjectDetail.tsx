@@ -13,25 +13,37 @@ type GalleryProps = {
   images: ImageNode[]
 }
 
-const Gallery = ({ images }: GalleryProps) => {
-  console.log('images:', images)
-  return (
-    <S.Gallery>
-      {images.map(({ node: item }, idx) => (
-        <GatsbyImage
-          image={item.childImageSharp.gatsbyImageData}
-          objectFit="cover"
-          objectPosition="50% 50%"
-          alt="alt"
-          key={idx}
-        />
-      ))}
-    </S.Gallery>
-  )
-}
+const Gallery = ({ images }: GalleryProps) => (
+  <S.Gallery>
+    {images.map(({ node: item }, idx) => (
+      <GatsbyImage
+        image={item.childImageSharp.gatsbyImageData}
+        objectFit="cover"
+        objectPosition="50% 50%"
+        alt="alt"
+        key={idx}
+      />
+    ))}
+  </S.Gallery>
+)
+
+// const PrevNext = ({ data }: ProjectShape) => (
+//   <S.Gallery>
+//     {images.map(({ node: item }, idx) => (
+//       <GatsbyImage
+//         image={item.childImageSharp.gatsbyImageData}
+//         objectFit="cover"
+//         objectPosition="50% 50%"
+//         alt="alt"
+//         key={idx}
+//       />
+//     ))}
+//   </S.Gallery>
+// )
 
 const ProjectDetail = ({ data }: ProjectShape) => {
   const images = data.images.edges || []
+  console.log('data', data.projects)
   return (
     <S.ProjectDetail>
       <Section>
@@ -49,11 +61,11 @@ const ProjectDetail = ({ data }: ProjectShape) => {
         <div className="details">
           <h2 className="text-h3">Project details</h2>
           <div className="details__summary">
-            <p>{data.project.desc}</p>
+            <p className="lead">{data.project.desc}</p>
             <div className="details__meta">
               <div className="details__meta__col">
                 <div>
-                  Clients
+                  Client
                   <span>{data.project.title}</span>
                 </div>
                 <div>
@@ -67,7 +79,7 @@ const ProjectDetail = ({ data }: ProjectShape) => {
                   <span>{data.project.industry}</span>
                 </div>
                 <div>
-                  Disciplines
+                  Services
                   {data.project.services.map((service, idx) => (
                     <span key={idx}>{service}</span>
                   ))}
@@ -78,13 +90,9 @@ const ProjectDetail = ({ data }: ProjectShape) => {
         </div>
       </Section>
 
-      {/* <div>
-          {data.project.services.map((service, idx) => (
-            <span key={idx} className="pill">
-              {service}
-            </span>
-          ))}
-        </div> */}
+      <Section border={true}>
+        {/* <PrevNext prev={data.project.} /> */}
+      </Section>
     </S.ProjectDetail>
   )
 }

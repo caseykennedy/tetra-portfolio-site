@@ -83,7 +83,7 @@ const staggerItems = {
 
 const Projects = () => {
   const projects = useProjects()
-  console.log('projects:', projects)
+  console.log('projects', projects)
   const controls = useAnimation()
   const [ref, inView] = useInView({
     threshold: 0.05,

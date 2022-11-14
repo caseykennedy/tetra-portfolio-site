@@ -11,10 +11,14 @@ export const Footer = styled.footer`
   display: flex;
   flex-flow: column nowrap;
   border-top: var(--border);
-  min-height: 70vh;
+  min-height: 55vh;
 
   position: relative;
   z-index: 1;
+
+  @media ${breakpoint.tablet} {
+    min-height: initial;
+  }
 
   .contact {
     flex: 1;
@@ -73,6 +77,7 @@ export const Footer = styled.footer`
     align-items: flex-end;
     border-top: var(--border);
     padding: var(--gutter);
+    padding-bottom: var(--space-xl);
 
     @media ${breakpoint.tablet} {
       padding-bottom: var(--space-xxl);
@@ -92,6 +97,10 @@ export const Footer = styled.footer`
 
       @media ${breakpoint.tablet} {
         flex-flow: row nowrap;
+      }
+
+      a {
+        cursor: ne-resize;
       }
     }
   }

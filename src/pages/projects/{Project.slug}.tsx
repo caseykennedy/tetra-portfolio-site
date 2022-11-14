@@ -13,8 +13,7 @@ import { ProjectShape } from '../../types'
 
 const ProjectPage = (props: ProjectShape) => {
   const { data } = props
-  const { project, images } = data
-  console.log('project:', project)
+  const { project } = data
   return (
     <>
       <SEO
@@ -64,6 +63,7 @@ export const query = graphql`
       title
       tagline
       website
+      year
     }
     images: allFile(filter: { relativeDirectory: { eq: $slug } }) {
       edges {
@@ -77,6 +77,66 @@ export const query = graphql`
               layout: FULL_WIDTH
               placeholder: DOMINANT_COLOR
             )
+          }
+        }
+      }
+    }
+    projects: allProject(filter: { slug: { eq: $slug } }) {
+      edges {
+        node {
+          category
+          color
+          desc
+          id
+          images
+          industry
+          services
+          slug
+          title
+          tagline
+          website
+          year
+          cover {
+            childImageSharp {
+              gatsbyImageData(
+                aspectRatio: 1.5
+                layout: FULL_WIDTH
+                formats: [AUTO, AVIF, WEBP]
+                placeholder: DOMINANT_COLOR
+              )
+            }
+          }
+        }
+        previous {
+          desc
+          id
+          slug
+          title
+          cover {
+            childImageSharp {
+              gatsbyImageData(
+                aspectRatio: 1.5
+                layout: FULL_WIDTH
+                formats: [AUTO, AVIF, WEBP]
+                placeholder: DOMINANT_COLOR
+              )
+            }
+          }
+        }
+        next {
+          desc
+          id
+          slug
+          title
+          cover {
+            childImageSharp {
+              gatsbyImageData(
+                aspectRatio: 1.5
+                layout: FULL_WIDTH
+                formats: [AUTO, AVIF, WEBP]
+                placeholder: DOMINANT_COLOR
+              )
+            }
           }
         }
       }

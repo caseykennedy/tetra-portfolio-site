@@ -58,6 +58,7 @@ export type ProjectShape = {
     images: {
       edges: ImageNode[]
     }
+    projects: IProjects
   }
 }
 
