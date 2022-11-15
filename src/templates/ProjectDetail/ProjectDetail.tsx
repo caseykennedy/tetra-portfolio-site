@@ -81,9 +81,11 @@ const ProjectDetail = ({ data, pageContext }: ProjectDataShape) => {
           <span>{page.tagline}</span>
         </h1>
       </Section>
+
       <Section border={false}>
         <Gallery images={images} />
       </Section>
+
       <Section border={true}>
         <div className="details">
           <h2 className="text-h3">Project details</h2>
@@ -116,9 +118,11 @@ const ProjectDetail = ({ data, pageContext }: ProjectDataShape) => {
           </div>
         </div>
       </Section>
+
       <Section border={true} pt="0" pr="0" pb="0" pl="0">
         <PrevNext pageContext={pageContext} />
       </Section>
+
       <Section border={true}>back to home</Section>
     </S.ProjectDetail>
   )

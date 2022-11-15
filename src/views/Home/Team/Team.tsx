@@ -18,20 +18,23 @@ const data = [
   {
     id: 0,
     name: `casey`,
-    title: `technology`,
+    position: `technology`,
+    experience: '20',
     bio: `Casey is just this guy, you know? Designer, developer, friend. Actively exploring visual design, technology and inner space ✌️`,
   },
   {
     id: 1,
     name: `chris`,
-    title: `creative`,
+    position: `creative`,
+    experience: '20',
     bio: `I dont like my chickens alive, I like em dead and deep fried. You ever heard of Popeyes?`,
   },
   {
     id: 2,
     name: `taylor`,
-    title: `strategy`,
-    bio: `Chotai, chotai! Hogmog, ongei, onskii!`,
+    position: `strategy`,
+    experience: '15',
+    bio: `bio bio bio.`,
   },
 ]
 
@@ -60,18 +63,19 @@ const Team = () => {
     <S.Team>
       <div className="title">
         <p>
-          Team
-          <span>Working towards a decentralized future.</span>
+          Core team
+          <span>At your service.</span>
         </p>
       </div>
       <div className="team-grid">
-        {data.map((service, idx) => (
+        {data.map((person, idx) => (
           <div className="partner" key={idx}>
-            <p className="name">
-              {service.name}
-              <span className="position">{service.title}</span>
-            </p>
-            <p className="small">{service.bio}</p>
+            <div className="partner__name">{person.name}</div>
+            <div className="partner__position">
+              <div>{person.position}</div>
+              <div>{person.experience} years xp</div>
+            </div>
+            <p className="small">{person.bio}</p>
             <p className="small">
               <a href="/#" target="_blank" rel="nofollow" className="link">
                 LinkedIn

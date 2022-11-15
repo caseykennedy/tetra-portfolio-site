@@ -38,8 +38,10 @@ export const Projects = styled(motion.div)`
       display: flex;
       flex-flow: column nowrap;
 
-      backdrop-filter: blur(7px);
-      background-color: var(--color-bg-blur);
+      /* backdrop-filter: blur(7px); */
+      background-color: var(--color-black);
+      border: var(--border);
+      border-color: hsl(245, 8%, 18%);
       border-radius: var(--radius-sm);
       padding: var(--gutter);
 

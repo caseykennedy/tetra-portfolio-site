@@ -49,17 +49,22 @@ export const Team = styled(motion.div)`
         }
       }
 
-      .name {
-        font-size: var(--text-base-size);
+      &__name {
+        font-size: var(--text-md);
         font-weight: 700;
         text-transform: capitalize;
       }
 
-      .position {
+      &__position {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+
         border-bottom: var(--border);
         color: var(--color-text-muted);
-        display: block;
+        margin-bottom: var(--gutter);
         padding-bottom: var(--gutter);
+        padding-right: var(--gutter);
       }
     }
   }

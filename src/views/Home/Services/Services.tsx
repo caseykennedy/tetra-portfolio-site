@@ -22,7 +22,7 @@ const data = [
   {
     id: 0,
     discipline: `Strategy`,
-    description: `We immerse ourselves into an organisation to identify insights across brand, product and technology.`,
+    description: `It's not so much what you do, it's how you do it. The story is everything. The audience is key. Who, why and where? Give us a task, we'll provide the plan, the map, and the way.`,
     capabilities: [
       'Audience analysis',
       'Brand architecture',
@@ -36,8 +36,7 @@ const data = [
   {
     id: 1,
     discipline: `Branding`,
-    description: `We build dynamic, distinct brands that transform how businesses
-    connect with their audiences.`,
+    description: `A brand is a living feeling—a being, if you will. That's why we take our design-thinking seriously. Ensuring you have a unique, intelligent and desirable brand to present to the world.`,
     capabilities: [
       'Art direction',
       'Brand guidelines',
@@ -52,7 +51,7 @@ const data = [
   {
     id: 2,
     discipline: `Digital`,
-    description: `We channel insights into elegant, engaging digital experiences that make the internet a better place.`,
+    description: `We're out to make the internet a better place. Respecting the user and end-result of every interaction, we aim for seamless and smart. Whatever it is—we’ll build it with care.`,
     capabilities: [
       'Digital design systems',
       'Information architecture',
@@ -66,7 +65,7 @@ const data = [
   {
     id: 3,
     discipline: `Technology`,
-    description: `We engineer state-of-the-art experiences that respond to business needs and user expectations.`,
+    description: `We build state-of-the-art tech experiences, not only engineered with business needs in mind, but geared towards user experience and seamless interaction.`,
     capabilities: [
       'Web / App development',
       'web3 / dApp',

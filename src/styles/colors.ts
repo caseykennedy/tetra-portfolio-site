@@ -25,9 +25,6 @@ const Colors = css`
   }
 
   [data-theme='lightMode'] {
-    --color-black: hsl(0, 0%, 100%);
-    --color-white: hsl(0, 0%, 0%);
-
     // background
     --color-bg: hsl(245, 8%, 92%);
     --color-bg-blur: hsla(245, 8%, 92%, 0.875);

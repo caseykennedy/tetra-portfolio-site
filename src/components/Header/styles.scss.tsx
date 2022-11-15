@@ -13,7 +13,7 @@ export const Header = styled.header`
 
   display: flex;
   flex-flow: row nowrap;
-  align-items: center;
+  /* align-items: center; */
   justify-content: space-between;
 
   /* position: sticky;

@@ -25,11 +25,7 @@ const Home = () => (
     <Hero />
 
     <Marquee speed={50}>
-      <div>something</div>
-      <div>statement</div>
-      <div>idea</div>
-      <div>ideaology</div>
-      <div>vision</div>
+      <div>good design is hard, great design is invisible</div>
     </Marquee>
 
     <Section border={true}>
