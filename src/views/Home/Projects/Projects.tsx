@@ -6,9 +6,6 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 
-// Components
-// import Icon from '../../../components/Icons'
-
 // Hooks
 import useProjects from '../../../hooks/useProjects'
 
@@ -19,15 +16,25 @@ import * as S from './styles.scss'
 
 const imageVariants = {
   large: {
-    y: 0,
+    scale: 1.075,
     transition: {
-      y: { stiffness: 400, velocity: -400, duration: 0.25, ease: 'easeInOut' },
+      scale: {
+        stiffness: 400,
+        velocity: -400,
+        duration: 0.65,
+        ease: 'easeInOut',
+      },
     },
   },
   small: {
-    y: 0,
+    scale: 1,
     transition: {
-      y: { stiffness: 400, velocity: -400, duration: 0.25, ease: 'easeInOut' },
+      transform: {
+        stiffness: 400,
+        velocity: -400,
+        duration: 0.55,
+        ease: 'easeInOut',
+      },
     },
   },
 }
@@ -84,39 +91,27 @@ const staggerItems = {
 const Projects = () => {
   const projects = useProjects()
   console.log('projects', projects)
-  const controls = useAnimation()
-  const [ref, inView] = useInView({
-    threshold: 0.05,
-  })
-
-  useEffect(() => {
-    const isVisible = async () => {
-      if (inView) {
-        await controls.start('visible')
-      }
-    }
-    isVisible().catch(console.error)
-  }, [controls, inView])
 
   return (
-    <S.Projects
-      animate={controls}
-      initial="hidden"
-      variants={staggerItems}
-      ref={ref}
-    >
+    <S.Projects variants={staggerItems}>
       <div className="project-grid">
         {projects.map(({ node: item }) => (
           <motion.div
             variants={polyVariant}
-            initial={['closed', 'large']}
-            whileHover={['open', 'small']}
-            animate={['closed', 'large']}
+            initial={['closed', 'small']}
+            whileHover={['open', 'large']}
+            animate={['closed', 'small']}
             key={item.id}
             className="project"
           >
             <Link to={`/projects/${item.slug}`}>
-              <motion.div variants={imageVariants} className="project__item">
+              <motion.div
+                variants={imageVariants}
+                initial={['closed', 'small']}
+                whileHover={['open', 'large']}
+                animate={['closed', 'small']}
+                className="project__item"
+              >
                 <GatsbyImage
                   image={item.cover.childImageSharp.gatsbyImageData}
                   objectFit="cover"
@@ -124,20 +119,20 @@ const Projects = () => {
                   alt="alt"
                   className="project__figure"
                 />
-                <motion.div variants={itemVariants} className="project__meta">
-                  <div className="title">
-                    <span>
-                      <strong>{item.title}</strong>
-                    </span>
-                  </div>
-                  <motion.ul variants={listVariants}>
-                    {item.services.map((service, idx) => (
-                      <motion.li variants={itemVariants} key={idx}>
-                        {service}
-                      </motion.li>
-                    ))}
-                  </motion.ul>
-                </motion.div>
+              </motion.div>
+              <motion.div variants={itemVariants} className="project__meta">
+                <div className="title">
+                  <span>
+                    <strong>{item.title}</strong>
+                  </span>
+                </div>
+                <motion.ul variants={listVariants}>
+                  {item.services.map((service, idx) => (
+                    <motion.li variants={itemVariants} key={idx}>
+                      {service}
+                    </motion.li>
+                  ))}
+                </motion.ul>
               </motion.div>
             </Link>
           </motion.div>

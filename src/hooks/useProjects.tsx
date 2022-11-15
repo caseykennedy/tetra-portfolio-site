@@ -1,14 +1,14 @@
 // useProjects hook
 
 import { graphql, useStaticQuery } from 'gatsby'
-import { IProjects } from '../types'
+import { ProjectHookShape } from '../types'
 
 // ___________________________________________________________________
 
 const useProjects = () => {
-  const data = useStaticQuery<IProjects>(graphql`
+  const data = useStaticQuery<ProjectHookShape>(graphql`
     query AllProjectsQuery {
-      projects: allProject {
+      projects: allProjectsYaml {
         edges {
           node {
             category

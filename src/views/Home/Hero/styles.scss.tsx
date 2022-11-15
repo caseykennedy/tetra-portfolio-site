@@ -30,7 +30,7 @@ export const Hero = styled.div`
 
       position: sticky;
       top: var(--gutter);
-      max-inline-size: 75ch;
+      max-inline-size: 70ch;
 
       /* &:first-child {
         border-bottom: var(--border);

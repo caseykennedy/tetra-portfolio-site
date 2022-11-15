@@ -54,15 +54,15 @@ module.exports = {
     },
     {
       resolve: 'gatsby-transformer-yaml',
-      options: {
-        typeName: ({ node }) => {
-          const name = node.sourceInstanceName
-          if (name === `projects`) {
-            return `Project`
-          }
-          return name
-        },
-      },
+      // options: {
+      //   typeName: ({ node }) => {
+      //     const name = node.sourceInstanceName
+      //     if (name === `projects`) {
+      //       return `Project`
+      //     }
+      //     return name
+      //   },
+      // },
     },
     {
       resolve: 'gatsby-source-filesystem',

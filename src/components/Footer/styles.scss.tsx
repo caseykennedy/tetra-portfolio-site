@@ -17,7 +17,7 @@ export const Footer = styled.footer`
   z-index: 1;
 
   @media ${breakpoint.tablet} {
-    min-height: initial;
+    min-height: 44vh;
   }
 
   .contact {

@@ -20,22 +20,10 @@ import * as S from './styles.scss'
 
 // ___________________________________________________________________
 
-// const Capabilities = () => (
-//   <Section>
-//     <S.Capabilities>
-//       <h4>Capabilities</h4>
-//       <div>web | app dev</div>
-//       <div>ui + ux</div>
-//       <div>design systems</div>
-//       <div>wireframing</div>
-//       <div>prototyping</div>
-//     </S.Capabilities>
-//   </Section>
-// )
-
 const Home = () => (
   <S.Home>
     <Hero />
+
     <Marquee speed={50}>
       <div>something</div>
       <div>statement</div>

@@ -2,8 +2,9 @@
 // ___________________________________________________________________
 
 import React from 'react'
+import { graphql, Link } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
-import { ProjectShape, ImageNode } from '../../types'
+import { ImageNode, ProjectDataShape, PrevNextShape } from '../../types'
 import * as S from './styles.scss'
 import Section from '../../components/Section'
 
@@ -27,60 +28,86 @@ const Gallery = ({ images }: GalleryProps) => (
   </S.Gallery>
 )
 
-// const PrevNext = ({ data }: ProjectShape) => (
-//   <S.Gallery>
-//     {images.map(({ node: item }, idx) => (
-//       <GatsbyImage
-//         image={item.childImageSharp.gatsbyImageData}
-//         objectFit="cover"
-//         objectPosition="50% 50%"
-//         alt="alt"
-//         key={idx}
-//       />
-//     ))}
-//   </S.Gallery>
-// )
+const PrevNext = ({ pageContext }: PrevNextShape) => {
+  const { previous, next } = pageContext
+  return (
+    <S.PrevNext>
+      <div>
+        {previous && (
+          <Link to={`/projects/${previous.slug}`}>
+            <div className="title">
+              {pageContext.previous.title}
+              <div>previous</div>
+            </div>
+            <GatsbyImage
+              image={previous.cover.childImageSharp.gatsbyImageData}
+              objectFit="cover"
+              objectPosition="50% 50%"
+              alt="alt"
+            />
+          </Link>
+        )}
+      </div>
+      <div>
+        {next && (
+          <Link to={`/projects/${next.slug}`}>
+            <div className="title">
+              {pageContext.next.title}
+              <div>next</div>
+            </div>
+            <GatsbyImage
+              image={next.cover.childImageSharp.gatsbyImageData}
+              objectFit="cover"
+              objectPosition="50% 50%"
+              alt="alt"
+            />
+          </Link>
+        )}
+      </div>
+    </S.PrevNext>
+  )
+}
 
-const ProjectDetail = ({ data }: ProjectShape) => {
-  const images = data.images.edges || []
-  console.log('data', data.projects)
+const ProjectDetail = ({ data, pageContext }: ProjectDataShape) => {
+  const page = data.project
+  const images = data.images.edges
+
+  console.log('pageContext', pageContext)
   return (
     <S.ProjectDetail>
       <Section>
         <h1>
-          {data.project.title}
-          <span>{data.project.tagline}</span>
+          {page.title}
+          <span>{page.tagline}</span>
         </h1>
       </Section>
-
       <Section border={false}>
         <Gallery images={images} />
       </Section>
-
       <Section border={true}>
         <div className="details">
           <h2 className="text-h3">Project details</h2>
           <div className="details__summary">
-            <p className="lead">{data.project.desc}</p>
+            <p className="lead">{page.desc}</p>
             <div className="details__meta">
               <div className="details__meta__col">
                 <div>
                   Client
-                  <span>{data.project.title}</span>
+                  <span>{page.title}</span>
                 </div>
                 <div>
                   Year
-                  <span>{data.project.year}</span>
+                  <span>{page.year}</span>
                 </div>
               </div>
               <div className="details__meta__col">
                 <div>
                   Industry
-                  <span>{data.project.industry}</span>
+                  <span>{page.industry}</span>
                 </div>
                 <div>
                   Services
-                  {data.project.services.map((service, idx) => (
+                  {page.services.map((service, idx) => (
                     <span key={idx}>{service}</span>
                   ))}
                 </div>
@@ -89,12 +116,47 @@ const ProjectDetail = ({ data }: ProjectShape) => {
           </div>
         </div>
       </Section>
-
-      <Section border={true}>
-        {/* <PrevNext prev={data.project.} /> */}
+      <Section border={true} pt="0" pr="0" pb="0" pl="0">
+        <PrevNext pageContext={pageContext} />
       </Section>
+      <Section border={true}>back to home</Section>
     </S.ProjectDetail>
   )
 }
 
 export default ProjectDetail
+
+export const query = graphql`
+  query ($slug: String!) {
+    project: projectsYaml(slug: { eq: $slug }) {
+      category
+      color
+      desc
+      id
+      images
+      industry
+      services
+      slug
+      title
+      tagline
+      website
+      year
+    }
+    images: allFile(filter: { relativeDirectory: { eq: $slug } }) {
+      edges {
+        node {
+          name
+          childImageSharp {
+            gatsbyImageData(
+              # aspectRatio: 1.6
+              backgroundColor: ""
+              formats: WEBP
+              layout: FULL_WIDTH
+              placeholder: DOMINANT_COLOR
+            )
+          }
+        }
+      }
+    }
+  }
+`

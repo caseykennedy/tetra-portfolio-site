@@ -26,7 +26,7 @@ const Footer = () => {
     <S.Footer>
       <div className="contact">
         <div className="contact__cta">
-          <h2 className="text-h1">Let&apos;s talk about your project.</h2>
+          <h2 className="text-h1">Let&apos;s build something great.</h2>
           <a href={mailTo} className="btn btn--primary">
             Email us
             <Icon name="arrow" className="icon" />

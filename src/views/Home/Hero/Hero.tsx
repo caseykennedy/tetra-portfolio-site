@@ -29,8 +29,7 @@ const Hero = () => {
               {/* Helping brands develop
               <br />
               cutting-edge digital experiences. */}
-              Tetra is a design and development studio for people, teams and
-              visionaries.
+              Tetra is a design and development studio for visionaries.
               {/* <br />
               <br />
               We believe the next generation of the internet (web3) will be
@@ -94,9 +93,9 @@ const Hero = () => {
           <TetraGeo
             flatShading={false}
             position={[0, 1, 0]}
-            radius={4}
+            radius={5}
             detail={0}
-            speed={0.0009}
+            speed={0.00079}
             wireframe={true}
           />
         </Canvas>

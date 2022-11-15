@@ -25,11 +25,13 @@ export const Projects = styled(motion.div)`
   }
 
   .project {
+    border-radius: var(--radius);
+    overflow: hidden;
     position: relative;
     /* margin-bottom: var(--space-xl); */
 
-    &__figure img {
-      border-radius: var(--radius);
+    a {
+      position: relative;
     }
 
     &__meta {

@@ -71,3 +71,46 @@ export const Gallery = styled.div`
     border-radius: var(--radius);
   }
 `
+
+export const PrevNext = styled.div`
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-auto-rows: auto;
+  gap: 1px;
+
+  background: var(--color-border);
+
+  @media ${breakpoint.tablet} {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  & > * {
+    background: var(--color-bg);
+  }
+
+  a {
+    display: flex;
+    flex-flow: row nowrap;
+
+    background: var(--color-bg);
+    padding: var(--gutter);
+    overflow: hidden;
+
+    & > * {
+      flex: 1;
+    }
+
+    .title {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    .gatsby-image-wrapper {
+      img {
+        border-radius: var(--radius);
+      }
+    }
+  }
+`
