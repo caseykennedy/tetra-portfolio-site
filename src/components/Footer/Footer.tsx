@@ -12,6 +12,7 @@ import * as S from './styles.scss'
 
 // Components
 import Icon from '../Icons'
+import Section from "../Section"
 
 // ___________________________________________________________________
 
@@ -47,9 +48,10 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <Section border={true}>back to home</Section>
       <div className="info">
         <div className="info__legal">
-          &copy; Tetrashapes {new Date().getFullYear()}
+          ©☻ tetra {new Date().getFullYear()}
         </div>
         <div className="info__links">
           <a

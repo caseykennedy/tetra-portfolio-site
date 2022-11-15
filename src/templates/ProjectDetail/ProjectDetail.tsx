@@ -122,8 +122,6 @@ const ProjectDetail = ({ data, pageContext }: ProjectDataShape) => {
       <Section border={true} pt="0" pr="0" pb="0" pl="0">
         <PrevNext pageContext={pageContext} />
       </Section>
-
-      <Section border={true}>back to home</Section>
     </S.ProjectDetail>
   )
 }

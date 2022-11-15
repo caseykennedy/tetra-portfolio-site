@@ -25,7 +25,15 @@ const Home = () => (
     <Hero />
 
     <Marquee speed={50}>
-      <div>good design is hard, great design is invisible</div>
+      <div>
+        We don&apos;t strive to be the best design studio in the world—just the
+        best one for you.
+      </div>
+      <div>
+        We engineer seamless brands that blend digital and analog, with an
+        approach grounded in insight, built on collaboration and executed with
+        detail.
+      </div>
     </Marquee>
 
     <Section border={true}>
