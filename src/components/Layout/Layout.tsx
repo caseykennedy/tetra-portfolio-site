@@ -20,12 +20,12 @@ import 'react-responsive-modal/styles.css'
 
 export type LayoutProps = {
   children: React.ReactNode
-  // location?: {
-  //   pathname: string
-  // }
+  location?: {
+    pathname: string
+  }
 }
 
-const Layout = ({ children }: LayoutProps) => {
+const Layout = ({ children, location }: LayoutProps) => {
   const { isDarkMode } = useDarkMode()
   useEffect(() => {
     const dataTheme = isDarkMode ? 'darkMode' : 'lightMode'
@@ -44,7 +44,7 @@ const Layout = ({ children }: LayoutProps) => {
         {/* <SmoothScroll>{children}</SmoothScroll> */}
         {children}
       </S.Content>
-      <Footer />
+      <Footer location={location} />
     </S.Wrapper>
   )
 }

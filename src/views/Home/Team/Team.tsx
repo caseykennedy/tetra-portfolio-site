@@ -1,10 +1,6 @@
 // Team:
 
 import * as React from 'react'
-import { motion } from 'framer-motion'
-
-// Components
-import Icon from '../../../components/Icons'
 
 // Hooks
 import useDate from '../../../hooks/useDate'

@@ -1,12 +1,8 @@
 // Services:
 
 import * as React from 'react'
-import { motion } from 'framer-motion'
 import SwiperCore, { Pagination } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
-
-// Components
-import Icon from '../../../components/Icons'
 
 // Hooks
 import useDate from '../../../hooks/useDate'

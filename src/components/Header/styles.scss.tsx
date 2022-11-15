@@ -8,7 +8,7 @@ import breakpoint from '../../utils/breakpoint'
 export const Header = styled.header`
   backdrop-filter: blur(7px);
   /* background-color: var(--color-bg); */
-  background-color: var(--color-bg-blur);
+  /* background-color: var(--color-bg-blur); */
   border-bottom: var(--border);
 
   display: flex;
@@ -20,7 +20,7 @@ export const Header = styled.header`
   top: 0; */
 
   padding: var(--gutter);
-  padding-bottom: var(--space-xl);
+  padding-bottom: var(--space-lg);
   /* height: var(--header-height); */
   width: 100%;
   z-index: 9;

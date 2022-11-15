@@ -12,7 +12,7 @@ import * as S from './styles.scss'
 
 // Components
 import Icon from '../Icons'
-import Section from "../Section"
+import Section from '../Section'
 
 // ___________________________________________________________________
 
@@ -21,8 +21,15 @@ const twitterURL = 'https://twitter.com/tetrashapes'
 const handshakeURL = 'https://handshake.org'
 const discordURL = 'https://discord.gg/8qZ7Y4'
 
-const Footer = () => {
+type FooterProps = {
+  location?: {
+    pathname: string
+  }
+}
+
+const Footer = ({ location }) => {
   const nevadaTime = useDate()
+  const isIndex = location.pathname === '/'
   return (
     <S.Footer>
       <div className="contact">
@@ -48,11 +55,9 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <Section border={true}>back to home</Section>
+      {!isIndex && <Section border={true}>back to home</Section>}
       <div className="info">
-        <div className="info__legal">
-          ©☻ tetra {new Date().getFullYear()}
-        </div>
+        <div className="info__legal">©☻ tetra {new Date().getFullYear()}</div>
         <div className="info__links">
           <a
             href={twitterURL}
