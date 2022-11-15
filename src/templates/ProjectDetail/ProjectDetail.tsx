@@ -151,10 +151,11 @@ export const query = graphql`
           childImageSharp {
             gatsbyImageData(
               # aspectRatio: 1.6
-              backgroundColor: ""
+              backgroundColor: "transparent"
               formats: WEBP
               layout: FULL_WIDTH
               placeholder: DOMINANT_COLOR
+              quality: 50
             )
           }
         }

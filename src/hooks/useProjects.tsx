@@ -27,9 +27,11 @@ const useProjects = () => {
               childImageSharp {
                 gatsbyImageData(
                   aspectRatio: 1.5
+                  backgroundColor: "transparent"
+                  formats: WEBP
                   layout: FULL_WIDTH
-                  formats: [AUTO, AVIF, WEBP]
                   placeholder: DOMINANT_COLOR
+                  quality: 50
                 )
               }
             }
@@ -43,9 +45,11 @@ const useProjects = () => {
               childImageSharp {
                 gatsbyImageData(
                   aspectRatio: 1.5
+                  backgroundColor: "transparent"
+                  formats: WEBP
                   layout: FULL_WIDTH
-                  formats: [AUTO, AVIF, WEBP]
                   placeholder: DOMINANT_COLOR
+                  quality: 50
                 )
               }
             }
@@ -59,9 +63,11 @@ const useProjects = () => {
               childImageSharp {
                 gatsbyImageData(
                   aspectRatio: 1.5
+                  backgroundColor: "transparent"
+                  formats: WEBP
                   layout: FULL_WIDTH
-                  formats: [AUTO, AVIF, WEBP]
                   placeholder: DOMINANT_COLOR
+                  quality: 50
                 )
               }
             }

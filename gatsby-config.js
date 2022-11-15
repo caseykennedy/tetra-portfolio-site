@@ -93,9 +93,20 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    'gatsby-plugin-image',
-    'gatsby-plugin-sharp',
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: [`auto`, `webp`],
+          backgroundColor: 'transparent',
+          placeholder: 'dominantColor',
+          quality: 50,
+          breakpoints: [750, 1080, 1366, 1920],
+        },
+      },
+    },
     'gatsby-transformer-sharp',
+    'gatsby-plugin-image',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-offline',
     'gatsby-plugin-netlify',

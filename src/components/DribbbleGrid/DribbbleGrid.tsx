@@ -32,10 +32,11 @@ const DribbbleGrid = () => {
             childImageSharp {
               gatsbyImageData(
                 aspectRatio: 1.675
-                backgroundColor: ""
+                backgroundColor: "transparent"
                 formats: WEBP
                 layout: FULL_WIDTH
                 placeholder: DOMINANT_COLOR
+                quality: 50
               )
             }
           }
