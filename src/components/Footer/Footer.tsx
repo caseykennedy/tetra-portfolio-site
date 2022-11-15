@@ -4,9 +4,6 @@
 
 import * as React from 'react'
 
-// Hooks
-import useDate from '../../hooks/useDate'
-
 // Theme + UI
 import * as S from './styles.scss'
 
@@ -22,13 +19,12 @@ const handshakeURL = 'https://handshake.org'
 const discordURL = 'https://discord.gg/8qZ7Y4'
 
 type FooterProps = {
-  location?: {
+  location: {
     pathname: string
   }
 }
 
-const Footer = ({ location }) => {
-  const nevadaTime = useDate()
+const Footer = ({ location }: FooterProps) => {
   const isIndex = location.pathname === '/'
   return (
     <S.Footer>

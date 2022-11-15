@@ -20,7 +20,7 @@ import 'react-responsive-modal/styles.css'
 
 export type LayoutProps = {
   children: React.ReactNode
-  location?: {
+  location: {
     pathname: string
   }
 }
