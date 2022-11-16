@@ -92,11 +92,6 @@ export const Footer = styled.footer`
     }
 
     .control {
-      display: flex;
-      flex-flow: row nowrap;
-      align-items: center;
-      gap: var(--space-xxxs);
-
       color: var(--color-text-muted);
       text-decoration: none;
       transition: var(--transition-all);
@@ -113,6 +108,9 @@ export const Footer = styled.footer`
 
       &__top {
         cursor: n-resize;
+        background: transparent;
+        border: none;
+        padding: 0;
       }
     }
   }
