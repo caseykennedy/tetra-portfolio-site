@@ -67,8 +67,9 @@ export const Gallery = styled.div`
     grid-template-columns: repeat(2, 1fr);
   }
 
-  img {
+  div {
     border-radius: var(--radius);
+    overflow: hidden;
   }
 `
 
@@ -108,9 +109,8 @@ export const PrevNext = styled.div`
     }
 
     .gatsby-image-wrapper {
-      img {
-        border-radius: var(--radius);
-      }
+      border-radius: var(--radius);
+      overflow: hidden;
     }
   }
 `

@@ -3,6 +3,7 @@
 // ___________________________________________________________________
 
 import * as React from 'react'
+import { Link } from 'gatsby'
 
 // Theme + UI
 import * as S from './styles.scss'
@@ -26,6 +27,13 @@ type FooterProps = {
 
 const Footer = ({ location }: FooterProps) => {
   const isIndex = location.pathname === '/'
+  const scrollTop = (e: React.MouseEvent<HTMLButtonElement>) => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    })
+    e.preventDefault()
+  }
   return (
     <S.Footer>
       <div className="contact">
@@ -51,9 +59,24 @@ const Footer = ({ location }: FooterProps) => {
           </div>
         </div>
       </div>
-      {!isIndex && <Section border={true}>back to home</Section>}
+
+      <div className="utils">
+        <button
+          type="button"
+          onClick={scrollTop}
+          className="control control__top"
+        >
+          top
+        </button>
+        {!isIndex && (
+          <Link to="/" className="control control__index">
+            index
+          </Link>
+        )}
+      </div>
+
       <div className="info">
-        <div className="info__legal">©☻ tetra {new Date().getFullYear()}</div>
+        <div className="info__legal">©☻ tetra/</div>
         <div className="info__links">
           <a
             href={twitterURL}

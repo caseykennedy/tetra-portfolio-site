@@ -1,8 +1,6 @@
 // Services:
 
 import * as React from 'react'
-import SwiperCore, { Pagination } from 'swiper'
-import { Swiper, SwiperSlide } from 'swiper/react'
 
 // Hooks
 import useDate from '../../../hooks/useDate'
@@ -61,7 +59,7 @@ const data = [
   {
     id: 3,
     discipline: `Technology`,
-    description: `We build state-of-the-art tech experiences, not only engineered with business needs in mind, but geared towards user experience and seamless interaction.`,
+    description: `We build state-of-the-art tech experiences, not only engineered with business needs in mind, but geared towards user experience and fluid interaction.`,
     capabilities: [
       'Web / App development',
       'web3 / dApp',
@@ -72,62 +70,41 @@ const data = [
   },
 ]
 
-// const Service = () => (
-//   <>
+// const ServiceSwiper = () => (
+//   <Swiper
+//     slidesPerView="auto"
+//     // centeredSlides={true}
+//     spaceBetween={12}
+//     breakpoints={{
+//       '640': {
+//         slidesPerView: 2,
+//       },
+//       '768': {
+//         slidesPerView: 3,
+//       },
+//       '1024': {
+//         slidesPerView: 4,
+//       },
+//     }}
+//   >
 //     {data.map((service, idx) => (
-//       <div className="service" key={idx}>
-//         <div className="service__figure">
-//           <div className="integer">{service.id}</div>
-//           <div className="name">{service.discipline}</div>
+//       <SwiperSlide key={idx}>
+//         <div className="service">
+//           <div className="service__figure">
+//             <div className="integer">{service.id}</div>
+//             <div className="name">{service.discipline}</div>
+//           </div>
+//           <p className="small">{service.description}</p>
+//           <ul>
+//             {service.capabilities.map((cap, id) => (
+//               <li key={id}>{cap}</li>
+//             ))}
+//           </ul>
 //         </div>
-//         <p className="small">{service.description}</p>
-//         <ul>
-//           {service.capabilities.map((cap, id) => (
-//             <li key={id}>{cap}</li>
-//           ))}
-//         </ul>
-//       </div>
+//       </SwiperSlide>
 //     ))}
-//   </>
+//   </Swiper>
 // )
-
-SwiperCore.use([Pagination])
-
-const ServiceSwiper = () => (
-  <Swiper
-    slidesPerView="auto"
-    // centeredSlides={true}
-    spaceBetween={12}
-    breakpoints={{
-      '640': {
-        slidesPerView: 2,
-      },
-      '768': {
-        slidesPerView: 3,
-      },
-      '1024': {
-        slidesPerView: 4,
-      },
-    }}
-  >
-    {data.map((service, idx) => (
-      <SwiperSlide key={idx}>
-        <div className="service">
-          <div className="service__figure">
-            <div className="integer">{service.id}</div>
-            <div className="name">{service.discipline}</div>
-          </div>
-          <p className="small">{service.description}</p>
-          <ul>
-            {service.capabilities.map((cap, id) => (
-              <li key={id}>{cap}</li>
-            ))}
-          </ul>
-        </div>
-      </SwiperSlide>
-    ))}
-  </Swiper>
-)
 
 const Services = () => {
   const nevadaTime = useDate()

@@ -15,14 +15,14 @@ const data = [
     id: 0,
     name: `casey`,
     position: `technology`,
-    experience: '20',
+    experience: '14',
     bio: `Casey is just this guy, you know? Designer, developer, friend. Actively exploring visual design, technology and inner space ✌️`,
   },
   {
     id: 1,
     name: `chris`,
     position: `creative`,
-    experience: '20',
+    experience: '16',
     bio: `I dont like my chickens alive, I like em dead and deep fried. You ever heard of Popeyes?`,
   },
   {
