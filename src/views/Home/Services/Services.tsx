@@ -54,6 +54,7 @@ const data = [
       'Wireframing',
       'Prototyping',
       'User journey mapping',
+      'Ad design',
     ],
   },
   {
@@ -66,6 +67,7 @@ const data = [
       'eCommerce',
       'CMS integration',
       'API integration',
+      'Ad development',
     ],
   },
 ]

@@ -16,21 +16,21 @@ const data = [
     name: `casey`,
     position: `technology`,
     experience: '14',
-    bio: `Casey is just this guy, you know? Designer, developer, friend. Actively exploring visual design, technology and inner space ✌️`,
+    bio: `Not your ordinary developer, Casey has a background in design and has made his way through a broad range of industries including advertising and design, DNS, domain registration, casino and hospitality, and music festivals and events—where deliverables ranged from logos and packaging to websites and blockchain dApps.`,
   },
   {
     id: 1,
     name: `chris`,
     position: `creative`,
     experience: '16',
-    bio: `I dont like my chickens alive, I like em dead and deep fried. You ever heard of Popeyes?`,
+    bio: `Chris has served as the creative director and lead designer for a wide array of startups, personalities, corporations and foundations. Ranging from gaming to cosmetics, music, fashion, fitness, automotive, health, food and beverage—tech and crypto has been his main focus since 2018.`,
   },
   {
     id: 2,
     name: `taylor`,
     position: `strategy`,
     experience: '15',
-    bio: `bio bio bio.`,
+    bio: `Taylor has worked in creative production and development for immersive web and mobile advertising campaigns across many industries and brands—blockchain has been his focus since 2015.`,
   },
 ]
 
@@ -72,11 +72,11 @@ const Team = () => {
               <div>{person.experience} years xp</div>
             </div>
             <p className="small">{person.bio}</p>
-            <p className="small">
+            {/* <p className="small">
               <a href="/#" target="_blank" rel="nofollow" className="link">
                 LinkedIn
               </a>
-            </p>
+            </p> */}
           </div>
         ))}
       </div>

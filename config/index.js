@@ -2,7 +2,7 @@ module.exports = {
   pathPrefix: '/', // Prefix for all links. If you deploy your site to example.com/portfolio your pathPrefix should be "portfolio"
 
   // Banner
-  bannerUrl: '',
+  bannerUrl: '/banner.png',
 
   siteTitle: 'tetra /', // Navigation and Site Title
   siteTitleAlt: 'tetra /', // Alternative Site title for SEO

@@ -70,7 +70,7 @@ const Footer = ({ location }: FooterProps) => {
         </button>
         {!isIndex && (
           <Link to="/" className="control control__index">
-            index
+            home
           </Link>
         )}
       </div>

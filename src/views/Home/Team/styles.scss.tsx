@@ -39,7 +39,7 @@ export const Team = styled(motion.div)`
     }
 
     @media ${breakpoint.desktop} {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
     }
 
     .partner {
