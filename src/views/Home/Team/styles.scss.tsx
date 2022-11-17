@@ -49,22 +49,40 @@ export const Team = styled(motion.div)`
         }
       }
 
-      &__name {
-        font-size: var(--text-md);
-        font-weight: 700;
-        text-transform: capitalize;
-      }
-
-      &__position {
+      &__meta {
         display: flex;
         flex-flow: row nowrap;
-        justify-content: space-between;
+        align-items: center;
+        gap: var(--gutter);
 
         border-bottom: var(--border);
-        color: var(--color-text-muted);
         margin-bottom: var(--gutter);
         padding-bottom: var(--gutter);
-        padding-right: var(--gutter);
+
+        &__avatar {
+          clip-path: circle(50% at 50% 50%);
+          height: 75px;
+          width: 75px;
+        }
+
+        &__person {
+          flex: 1;
+        }
+
+        &__name {
+          font-size: var(--text-md);
+          font-weight: 700;
+          text-transform: capitalize;
+        }
+
+        &__position {
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-between;
+
+          color: var(--color-text-muted);
+          padding-right: var(--space-xxl);
+        }
       }
     }
   }

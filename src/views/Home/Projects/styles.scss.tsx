@@ -14,13 +14,12 @@ export const Projects = styled(motion.div)`
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-auto-rows: auto;
-    gap: var(--space-xxxs);
+    gap: var(--gutter);
 
     width: 100%;
 
     @media ${breakpoint.tablet} {
       grid-template-columns: repeat(2, 1fr);
-      gap: var(--gutter);
     }
   }
 
@@ -31,7 +30,20 @@ export const Projects = styled(motion.div)`
     /* margin-bottom: var(--space-xl); */
 
     a {
-      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    &__item {
+      .gatsby-image-wrapper {
+        border-radius: var(--radius);
+        overflow: hidden;
+
+        img {
+          border-radius: var(--radius);
+          overflow: hidden;
+        }
+      }
     }
 
     &__meta {
@@ -54,18 +66,13 @@ export const Projects = styled(motion.div)`
       .title {
         font-size: var(--text-md);
         margin-bottom: var(--space-xxxs);
-
-        span {
-          /* color: var(--color-white); */
-          transition: color var(--transition);
-        }
       }
 
       ul {
         display: flex;
         flex-flow: row wrap;
         align-items: center;
-        gap: var(--space-sm);
+        gap: var(--space-xxxxs);
 
         li {
           display: flex;
@@ -73,14 +80,15 @@ export const Projects = styled(motion.div)`
 
           /* border: var(--border); */
           border-radius: var(--radius);
+          font-size: var(--text-base-size);
           white-space: nowrap;
           transition: color var(--transition);
 
           /* opacity: 0; */
 
-          &:hover {
+          /* &:hover {
             color: var(--color-white);
-          }
+          } */
         }
       }
     }

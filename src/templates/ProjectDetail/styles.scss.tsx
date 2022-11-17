@@ -70,6 +70,11 @@ export const Gallery = styled.div`
   div {
     border-radius: var(--radius);
     overflow: hidden;
+
+    img {
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
   }
 `
 
@@ -111,6 +116,11 @@ export const PrevNext = styled.div`
     .gatsby-image-wrapper {
       border-radius: var(--radius);
       overflow: hidden;
+
+      img {
+        border-radius: var(--radius);
+        overflow: hidden;
+      }
     }
   }
 `

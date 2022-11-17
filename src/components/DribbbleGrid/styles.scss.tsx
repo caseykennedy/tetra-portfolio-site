@@ -18,8 +18,12 @@ export const DribbbleGrid = styled.div`
     grid-template-columns: repeat(4, 1fr);
   }
 
-  img {
+  .gatsby-image-wrapper {
     border-radius: var(--radius);
+
+    img {
+      border-radius: var(--radius);
+    }
   }
 `
 

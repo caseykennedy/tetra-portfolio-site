@@ -129,7 +129,7 @@ const Projects = () => {
                 <motion.ul variants={listVariants}>
                   {item.services.map((service, idx) => (
                     <motion.li variants={itemVariants} key={idx}>
-                      {service}
+                      {service} /
                     </motion.li>
                   ))}
                 </motion.ul>

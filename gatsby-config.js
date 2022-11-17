@@ -67,17 +67,10 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: './content/projects',
-        name: 'projects',
-      },
-      __key: 'projects',
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
         name: 'config',
         path: `${__dirname}/config`,
       },
+      __key: 'config',
     },
     {
       resolve: 'gatsby-source-filesystem',
@@ -85,6 +78,23 @@ module.exports = {
         name: 'content',
         path: `${__dirname}/content`,
       },
+      __key: 'content',
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'projects',
+        path: `${__dirname}/content/projects`,
+      },
+      __key: 'projects',
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'team',
+        path: `${__dirname}/content/team`,
+      },
+      __key: 'team',
     },
     {
       resolve: `gatsby-plugin-sharp`,

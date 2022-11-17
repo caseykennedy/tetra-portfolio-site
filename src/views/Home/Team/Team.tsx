@@ -1,6 +1,8 @@
 // Team:
 
 import * as React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
+import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 
 // Hooks
 import useDate from '../../../hooks/useDate'
@@ -10,51 +12,53 @@ import * as S from './styles.scss'
 
 // ___________________________________________________________________
 
-const data = [
-  {
-    id: 0,
-    name: `casey`,
-    position: `technology`,
-    experience: '14',
-    bio: `Not your ordinary developer, Casey has a background in design and has made his way through a broad range of industries including advertising and design, DNS, domain registration, casino and hospitality, and music festivals and events—where deliverables ranged from logos and packaging to websites and blockchain dApps.`,
-  },
-  {
-    id: 1,
-    name: `chris`,
-    position: `creative`,
-    experience: '16',
-    bio: `Chris has served as the creative director and lead designer for a wide array of startups, personalities, corporations and foundations. Ranging from gaming to cosmetics, music, fashion, fitness, automotive, health, food and beverage—tech and crypto has been his main focus since 2018.`,
-  },
-  {
-    id: 2,
-    name: `taylor`,
-    position: `strategy`,
-    experience: '15',
-    bio: `Taylor has worked in creative production and development for immersive web and mobile advertising campaigns across many industries and brands—blockchain has been his focus since 2015.`,
-  },
-]
-
-// const Service = () => (
-//   <>
-//     {data.map((service, idx) => (
-//       <div className="service" key={idx}>
-//         <div className="service__figure">
-//           <div className="integer">{service.id}</div>
-//           <div className="name">{service.discipline}</div>
-//         </div>
-//         <p className="small">{service.description}</p>
-//         <ul>
-//           {service.capabilities.map((cap, id) => (
-//             <li key={id}>{cap}</li>
-//           ))}
-//         </ul>
-//       </div>
-//     ))}
-//   </>
-// )
+type TeamShape = {
+  team: {
+    edges: {
+      node: {
+        avatar: {
+          childImageSharp: {
+            gatsbyImageData: IGatsbyImageData
+          }
+        }
+        bio: string
+        experience: string
+        id: string
+        name: string
+        position: string
+      }
+    }[]
+  }
+}
 
 const Team = () => {
-  const nevadaTime = useDate()
+  const data: TeamShape = useStaticQuery(graphql`
+    query AllTeamQuery {
+      team: allTeamYaml {
+        edges {
+          node {
+            avatar {
+              childImageSharp {
+                gatsbyImageData(
+                  backgroundColor: "transparent"
+                  formats: WEBP
+                  layout: FULL_WIDTH
+                  placeholder: DOMINANT_COLOR
+                  quality: 50
+                )
+              }
+            }
+            bio
+            experience
+            id
+            name
+            position
+          }
+        }
+      }
+    }
+  `)
+  const team = data.team.edges
   return (
     <S.Team>
       <div className="title">
@@ -64,19 +68,25 @@ const Team = () => {
         </p>
       </div>
       <div className="team-grid">
-        {data.map((person, idx) => (
-          <div className="partner" key={idx}>
-            <div className="partner__name">{person.name}</div>
-            <div className="partner__position">
-              <div>{person.position}</div>
-              <div>{person.experience} years xp</div>
+        {team.map(({ node: person }) => (
+          <div className="partner" key={person.id}>
+            <div className="partner__meta">
+              <div className="partner__meta__avatar">
+                <GatsbyImage
+                  image={person.avatar.childImageSharp.gatsbyImageData}
+                  alt={person.name}
+                  objectFit="cover"
+                />
+              </div>
+              <div className="partner__meta__person">
+                <div className="partner__meta__name">{person.name}</div>
+                <div className="partner__meta__position">
+                  <div>{person.position}</div>
+                  <div>{person.experience} years xp</div>
+                </div>
+              </div>
             </div>
             <p className="small">{person.bio}</p>
-            {/* <p className="small">
-              <a href="/#" target="_blank" rel="nofollow" className="link">
-                LinkedIn
-              </a>
-            </p> */}
           </div>
         ))}
       </div>
