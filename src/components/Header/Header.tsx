@@ -8,6 +8,7 @@ import { useDarkMode } from 'usehooks-ts'
 // Components
 import MobileNav from './Overlay'
 import Modal from '../Modal'
+import Symbol from '../SVG/Symbol'
 
 // Styles
 import * as S from './styles.scss'
@@ -24,7 +25,8 @@ const Header = () => {
       <S.Header>
         <div className="logo">
           <Link to="/" aria-label="Back to index page">
-            tetra/
+            <Symbol />
+            tetra
           </Link>
         </div>
 

@@ -22,6 +22,10 @@ const Colors = css`
     --color-text-bright: hsl(245, 8%, 92%);
     // border
     --color-border: hsl(245, 8%, 18%);
+
+    // logo
+    --color-cls-2: var(--color-bg-light);
+    --color-cls-4: var(--color-text);
   }
 
   [data-theme='lightMode'] {
@@ -34,6 +38,10 @@ const Colors = css`
     --color-text-bright: hsl(249, 11%, 6%);
     // border
     --color-border: hsl(245, 8%, 80%);
+
+    // logo
+    --color-cls-2: var(--color-bg-blur);
+    --color-cls-4: var(--color-text);
   }
 `
 

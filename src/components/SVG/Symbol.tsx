@@ -4,42 +4,71 @@ import styled from 'styled-components'
 
 // ___________________________________________________________________
 
-const SVG = styled(motion.svg)<{ fill?: string }>``
+const SVG = styled(motion.svg)<{ fill?: string }>`
+  .cls-1 {
+    fill: none;
+  }
+
+  .cls-2 {
+    fill: var(--color-cls-2);
+  }
+
+  .cls-3,
+  .cls-4 {
+    opacity: 0.7;
+  }
+
+  .cls-5 {
+    isolation: isolate;
+  }
+
+  .cls-4 {
+    fill: var(--color-cls-4);
+  }
+`
 
 type Props = { fill?: string }
 
 const Symbol = ({ fill }: Props) => (
   <SVG
     width="32"
-    viewBox="0 0 32 32"
+    viewBox="0 0 66.77 58.44"
     initial="hidden"
     animate="visible"
     fill="none"
   >
-    <path
-      d="M13.7451 3.67639L28.3248 18.3001"
-      stroke={fill}
-      strokeWidth="2"
-      strokeMiterlimit="10"
-    />
-    <path
-      d="M3.64453 13.7097L18.382 28.4917"
-      stroke={fill}
-      strokeWidth="2"
-      strokeMiterlimit="10"
-    />
-    <path
-      d="M28.3382 18.3581C28.9271 18.9455 29.1395 20.0104 28.7374 21.4544C28.3424 22.8734 27.3858 24.4949 25.9308 25.9463C24.4757 27.3976 22.85 28.3517 21.4275 28.7458C19.9797 29.1468 18.9122 28.935 18.3232 28.3475C17.7343 27.7601 17.5219 26.6953 17.924 25.2512C18.319 23.8323 19.2756 22.2107 20.7306 20.7594C22.1857 19.308 23.8114 18.3539 25.2339 17.9599C26.6817 17.5589 27.7492 17.7707 28.3382 18.3581Z"
-      stroke={fill}
-      strokeWidth="2"
-      strokeMiterlimit="10"
-    />
-    <path
-      d="M13.6771 3.65278C14.266 4.24022 14.4783 5.30504 14.0763 6.74912C13.6813 8.16805 12.7247 9.78959 11.2696 11.2409C9.81459 12.6923 8.1889 13.6464 6.76634 14.0404C5.31856 14.4414 4.25102 14.2296 3.66208 13.6422C3.07314 13.0548 2.86081 11.99 3.26284 10.5459C3.65786 9.12694 4.61444 7.5054 6.0695 6.05405C7.52455 4.60271 9.15024 3.64857 10.5728 3.25455C12.0206 2.85355 13.0881 3.06535 13.6771 3.65278Z"
-      stroke={fill}
-      strokeWidth="2"
-      strokeMiterlimit="10"
-    />
+    <g id="LAYERS">
+      <g>
+        <g id="Layer_1-2" data-name="Layer 1-2">
+          <polygon
+            className="cls-4"
+            points="34.31 0 0 48.76 66.77 48.76 34.31 0"
+          />
+          <line className="cls-2" x1="44.61" y1="58.44" y2="48.76" />
+          <g id="Layer_1-2-2" data-name="Layer 1-2" className="cls-3">
+            <polyline
+              className="cls-2"
+              points="44.61 58.44 0 48.76 34.31 0 44.61 58.44"
+            />
+          </g>
+          <polyline
+            className="cls-4"
+            points="34.31 0 44.61 58.44 66.77 48.76"
+          />
+        </g>
+        <g id="Layer_1-2-3" data-name="Layer 1-2">
+          <polygon
+            className="cls-1"
+            points="34.31 0 0 48.76 66.77 48.76 34.31 0"
+          />
+          <line className="cls-1" y1="48.76" x2="44.61" y2="58.44" />
+          <polygon
+            className="cls-1"
+            points="34.31 0 44.61 58.44 66.77 48.76 34.31 0"
+          />
+        </g>
+      </g>
+    </g>
   </SVG>
 )
 

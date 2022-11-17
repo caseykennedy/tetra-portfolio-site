@@ -41,6 +41,11 @@ export const Header = styled.header`
     }
 
     a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-xxs);
+
       color: var(--color-text);
 
       &:hover {
