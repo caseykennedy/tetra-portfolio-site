@@ -71,6 +71,7 @@ const PrevNext = ({ pageContext }: PrevNextShape) => {
 const ProjectDetail = ({ data, pageContext }: ProjectDataShape) => {
   const page = data.project
   const images = data.images.edges
+  console.log("images", images)
 
   console.log('pageContext', pageContext)
   return (
@@ -153,7 +154,6 @@ export const query = graphql`
           name
           childImageSharp {
             gatsbyImageData(
-              # aspectRatio: 1.6
               backgroundColor: "transparent"
               formats: WEBP
               layout: FULL_WIDTH
