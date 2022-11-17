@@ -144,7 +144,10 @@ export const query = graphql`
       website
       year
     }
-    images: allFile(filter: { relativeDirectory: { eq: $slug } }) {
+    images: allFile(
+      filter: { relativeDirectory: { eq: $slug } }
+      sort: { fields: name }
+    ) {
       edges {
         node {
           name
