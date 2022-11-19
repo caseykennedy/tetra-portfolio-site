@@ -63,24 +63,24 @@ const Team = () => {
     <S.Team>
       <div className="title">
         <p>
-          Core team
-          <span>At your service.</span>
+          Team
+          <span>Working towards a decentralized internet.</span>
         </p>
       </div>
       <div className="team-grid">
         {team.map(({ node: person }) => (
           <div className="partner" key={person.id}>
-            <div className="partner__meta">
-              <div className="partner__meta__avatar">
+            <div className="partner__info">
+              <div className="partner__info__avatar">
                 <GatsbyImage
                   image={person.avatar.childImageSharp.gatsbyImageData}
                   alt={person.name}
                   objectFit="cover"
                 />
               </div>
-              <div className="partner__meta__person">
-                <div className="partner__meta__name">{person.name}</div>
-                <div className="partner__meta__position">
+              <div className="partner__info__person">
+                <div className="partner__info__name">{person.name}</div>
+                <div className="partner__info__position">
                   <div>{person.position}</div>
                   <div>{person.experience} years xp</div>
                 </div>

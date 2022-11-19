@@ -1,10 +1,9 @@
 // Projects:
 
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Link } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
-import { motion, useAnimation } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
+import { motion } from 'framer-motion'
 
 // Hooks
 import useProjects from '../../../hooks/useProjects'
@@ -65,51 +64,27 @@ const listVariants = {
   },
 }
 
-const polyVariant = {
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      y: { stiffness: 1000, velocity: -1000 },
-    },
-  },
-  hidden: {
-    y: 25,
-    opacity: 0,
-    transition: {
-      y: { stiffness: 1000 },
-    },
-  },
-}
-
-const staggerItems = {
-  visible: {
-    transition: { staggerChildren: 0.175, delayChildren: 0.175 },
-  },
-}
-
 const Projects = () => {
   const projects = useProjects()
   console.log('projects', projects)
 
   return (
-    <S.Projects variants={staggerItems}>
+    <S.Projects>
       <div className="project-grid">
         {projects.map(({ node: item }) => (
           <motion.div
-            variants={polyVariant}
-            initial={['closed', 'small']}
-            whileHover={['open', 'large']}
-            animate={['closed', 'small']}
+            initial="closed"
+            whileHover="open"
+            animate="closed"
             key={item.id}
             className="project"
           >
             <Link to={`/projects/${item.slug}`}>
               <motion.div
                 variants={imageVariants}
-                initial={['closed', 'small']}
-                whileHover={['open', 'large']}
-                animate={['closed', 'small']}
+                initial="small"
+                whileHover="large"
+                animate="small"
                 className="project__item"
               >
                 <GatsbyImage

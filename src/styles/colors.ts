@@ -25,7 +25,7 @@ const Colors = css`
 
     // logo
     --color-cls-2: var(--color-bg-light);
-    --color-cls-4: var(--color-text);
+    --color-cls-4: var(--color-text-bright);
   }
 
   [data-theme='lightMode'] {

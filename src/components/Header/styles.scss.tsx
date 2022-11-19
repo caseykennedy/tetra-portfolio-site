@@ -51,6 +51,14 @@ export const Header = styled.header`
       &:hover {
         color: var(--color-text-muted);
       }
+
+      span {
+        display: none;
+
+        @media ${breakpoint.tablet} {
+          display: block;
+        }
+      }
     }
 
     .symbol {

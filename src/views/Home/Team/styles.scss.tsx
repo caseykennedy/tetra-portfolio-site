@@ -49,7 +49,7 @@ export const Team = styled(motion.div)`
         }
       }
 
-      &__meta {
+      &__info {
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
@@ -60,9 +60,14 @@ export const Team = styled(motion.div)`
         padding-bottom: var(--gutter);
 
         &__avatar {
-          clip-path: circle(50% at 50% 50%);
+          border: var(--border);
+          border-radius: var(--radius-full);
           height: 75px;
           width: 75px;
+
+          .gatsby-image-wrapper {
+            clip-path: circle(50% at 50% 50%);
+          }
         }
 
         &__person {

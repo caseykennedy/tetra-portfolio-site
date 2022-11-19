@@ -18,6 +18,39 @@ import * as S from './styles.scss'
 
 const mailTo = 'mailto:taylor@tetrashapes.com'
 
+const HeroCanvas = () => (
+  <S.Tetra>
+    <Canvas camera={{ position: [0, 2, 10], fov: 60 }}>
+      <ambientLight intensity={1} />
+      <spotLight
+        position={[20, 20, 25]}
+        penumbra={1}
+        angle={0.25}
+        color="black"
+        // castShadow
+        // shadow-mapSize={[512, 512]}
+      />
+      <directionalLight position={[0, 5, -4]} intensity={20} />
+      <directionalLight position={[0, -15, -0]} intensity={19} color="blue" />
+      <TetraGeo
+        flatShading={false}
+        position={[0, 1, 0]}
+        radius={1}
+        speed={0.0035}
+        wireframe={false}
+      />
+      <TetraGeo
+        flatShading={false}
+        position={[0, 1, 0]}
+        radius={5}
+        detail={0}
+        speed={0.00079}
+        wireframe={true}
+      />
+    </Canvas>
+  </S.Tetra>
+)
+
 const Hero = () => {
   const nevadaTime = useDate()
   return (
@@ -67,40 +100,7 @@ const Hero = () => {
           </div>
         </div>
       </S.Hero>
-      <S.Tetra>
-        <Canvas camera={{ position: [0, 2, 10], fov: 60 }}>
-          <ambientLight intensity={1} />
-          <spotLight
-            position={[20, 20, 25]}
-            penumbra={1}
-            angle={0.25}
-            color="black"
-            // castShadow
-            // shadow-mapSize={[512, 512]}
-          />
-          <directionalLight position={[0, 5, -4]} intensity={20} />
-          <directionalLight
-            position={[0, -15, -0]}
-            intensity={19}
-            color="blue"
-          />
-          <TetraGeo
-            flatShading={false}
-            position={[0, 1, 0]}
-            radius={1}
-            speed={0.0035}
-            wireframe={false}
-          />
-          <TetraGeo
-            flatShading={false}
-            position={[0, 1, 0]}
-            radius={5}
-            detail={0}
-            speed={0.00079}
-            wireframe={true}
-          />
-        </Canvas>
-      </S.Tetra>
+      <HeroCanvas />
     </>
   )
 }

@@ -6,8 +6,8 @@ import { Link } from 'gatsby'
 import { useDarkMode } from 'usehooks-ts'
 
 // Components
-import MobileNav from './Overlay'
-import Modal from '../Modal'
+// import MobileNav from './Overlay'
+// import Modal from '../Modal'
 import Symbol from '../SVG/Symbol'
 
 // Styles
@@ -17,8 +17,8 @@ import * as S from './styles.scss'
 
 const Header = () => {
   const { isDarkMode, toggle } = useDarkMode(true)
-  const [isNavOpen, setNavOpen] = useState(false)
-  const toggleMenu = () => setNavOpen(!isNavOpen)
+  // const [isNavOpen, setNavOpen] = useState(false)
+  // const toggleMenu = () => setNavOpen(!isNavOpen)
 
   return (
     <>
@@ -26,7 +26,7 @@ const Header = () => {
         <div className="logo">
           <Link to="/" aria-label="Back to index page">
             <Symbol />
-            tetra
+            <span>tetra</span>
           </Link>
         </div>
 
@@ -50,9 +50,9 @@ const Header = () => {
         </div>
       </S.Header>
 
-      <Modal open={isNavOpen} close={toggleMenu}>
+      {/* <Modal open={isNavOpen} close={toggleMenu}>
         <MobileNav isOpen={isNavOpen} handleExitOnClick={toggleMenu} />
-      </Modal>
+      </Modal> */}
     </>
   )
 }

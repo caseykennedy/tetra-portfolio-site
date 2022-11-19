@@ -24,24 +24,20 @@ const Home = () => (
     <Hero />
 
     <Marquee speed={40}>
-      {/* <div>
-        We don&apos;t strive to be the best design studio in the world—just the
-        best one for you.
-      </div>
+      {/*
       <div>
         We engineer seamless brands that blend digital and analog, with an
         approach grounded in insight, built on collaboration and executed with
         detail.
       </div> */}
-      <div>Grounded collaboration.</div>
-      <div>Digital alchemists.</div>
-      <div>Design is problem solving.</div>
-      <div>No stone left unturned.</div>
-      <div>Flexible approach.</div>
-      <div>Vision to reality.</div>
-      <div>Action with intention.</div>
-      <div>We&apos;re in this together.</div>
-      <div>Impeccable communication.</div>
+      {/* <div>
+        We don&apos;t strive to be the best design studio in the world—just the
+        best one for you.
+      </div> */}
+      <div>Currently considering new projects for 2023.</div>
+      <div>Get in touch.</div>
+      <div>Taking on work for 2023.</div>
+      <div>Get in touch.</div>
     </Marquee>
 
     <Section border={true}>

@@ -57,6 +57,7 @@ const Typography = css`
     // line-height
     --body-line-height: 1.15;
     --heading-line-height: 1;
+    --list-line-height: 1.25;
 
     // letter-spacing
     --heading-letter-spacing: -0.25px;
@@ -333,6 +334,10 @@ const Typography = css`
 
   ul {
     color: var(--color-text-muted);
+
+    li {
+      line-height: var(--list-line-height);
+    }
   }
 `
 

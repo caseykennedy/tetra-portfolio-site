@@ -114,7 +114,7 @@ const Services = () => {
     <S.Services>
       <div className="title">
         <p>
-          What we do
+          Capabilities
           <span>
             We work across four disciplines; strategy, branding, digital and
             technology.

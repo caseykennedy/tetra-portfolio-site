@@ -20,7 +20,7 @@ const Intro = () => {
     <S.Intro>
       <div className="title">
         <p>
-          Our approach
+          Approach
           <span>Casual, conversational—direct and transformative.</span>
         </p>
       </div>

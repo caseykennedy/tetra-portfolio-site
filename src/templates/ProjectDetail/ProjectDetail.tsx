@@ -35,7 +35,7 @@ const PrevNext = ({ pageContext }: PrevNextShape) => {
       <div>
         {previous && (
           <Link to={`/projects/${previous.slug}`}>
-            <div className="title">
+            <div className="detail">
               {pageContext.previous.title}
               <div>previous</div>
             </div>
@@ -51,7 +51,7 @@ const PrevNext = ({ pageContext }: PrevNextShape) => {
       <div>
         {next && (
           <Link to={`/projects/${next.slug}`}>
-            <div className="title">
+            <div className="detail">
               {pageContext.next.title}
               <div>next</div>
             </div>
@@ -71,16 +71,16 @@ const PrevNext = ({ pageContext }: PrevNextShape) => {
 const ProjectDetail = ({ data, pageContext }: ProjectDataShape) => {
   const page = data.project
   const images = data.images.edges
-  console.log("images", images)
+  console.log('images', images)
 
   console.log('pageContext', pageContext)
   return (
     <S.ProjectDetail>
       <Section>
-        <h1>
-          {page.title}
-          <span>{page.tagline}</span>
-        </h1>
+        <div className="project-title">
+          <h1>{page.title}</h1>
+          <p>{page.tagline}</p>
+        </div>
       </Section>
 
       <Section border={false}>

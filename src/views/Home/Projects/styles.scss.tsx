@@ -1,12 +1,11 @@
 // Projects styles:
 
 import styled from 'styled-components'
-import { motion } from 'framer-motion'
 import { breakpoint } from '../../../styles/mixins'
 
 // ___________________________________________________________________
 
-export const Projects = styled(motion.div)`
+export const Projects = styled.div`
   display: flex;
   /* margin-bottom: var(--gutter); */
 

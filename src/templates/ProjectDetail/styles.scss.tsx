@@ -11,10 +11,22 @@ export const ProjectDetail = styled.div`
   flex-flow: column nowrap;
   width: 100%;
 
-  h1 span {
-    display: block;
-    color: var(--color-text-muted);
-    font-size: var(--text-base-size);
+  .project-title {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    gap: var(--gutter);
+
+    @media ${breakpoint.tablet} {
+      flex-flow: row nowrap;
+    }
+
+    p {
+      /* display: block; */
+      color: var(--color-text-muted);
+      font-size: var(--text-base-size);
+      text-align: right;
+    }
   }
 
   .details {
@@ -106,11 +118,19 @@ export const PrevNext = styled.div`
       flex: 1;
     }
 
-    .title {
+    .detail {
       display: flex;
       flex-flow: column nowrap;
       align-items: flex-start;
       justify-content: space-between;
+
+      color: var(--color-text-bright);
+      font-size: var(--text-md);
+
+      div {
+        color: var(--color-text-muted);
+        font-size: var(--text-base-size);
+      }
     }
 
     .gatsby-image-wrapper {
