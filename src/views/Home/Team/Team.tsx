@@ -64,7 +64,7 @@ const Team = () => {
       <div className="title">
         <p>
           Team
-          <span>Working towards a decentralized internet.</span>
+          <span>At your service.</span>
         </p>
       </div>
       <div className="team-grid">

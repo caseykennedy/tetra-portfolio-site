@@ -33,6 +33,7 @@ module.exports = {
     author: config.author,
     twitter: config.userTwitter,
     facebook: config.ogSiteName,
+    mailTo: config.mailTo,
   },
   plugins: [
     'gatsby-plugin-typescript',

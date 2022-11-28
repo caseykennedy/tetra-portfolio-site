@@ -2,6 +2,9 @@
 
 import * as React from 'react'
 
+// Hooks
+import useSiteSettings from '../../hooks/useSiteSettings'
+
 // Components
 import Section from '../../components/Section'
 import DribbbleGrid from '../../components/DribbbleGrid'
@@ -19,47 +22,75 @@ import * as S from './styles.scss'
 
 // ___________________________________________________________________
 
-const Home = () => (
-  <S.Home>
-    <Hero />
+const Home = () => {
+  const site = useSiteSettings()
+  return (
+    <S.Home>
+      <Hero />
 
-    <Marquee speed={40}>
-      {/*
-      <div>
-        We engineer seamless brands that blend digital and analog, with an
-        approach grounded in insight, built on collaboration and executed with
-        detail.
-      </div> */}
-      {/* <div>
-        We don&apos;t strive to be the best design studio in the world—just the
-        best one for you.
-      </div> */}
-      <div>Currently considering new projects for 2023.</div>
-      <div>Get in touch.</div>
-      <div>Taking on work for 2023.</div>
-      <div>Get in touch.</div>
-    </Marquee>
+      <Section border={true}>
+        <Projects />
+      </Section>
 
-    <Section border={true}>
-      <Projects />
-    </Section>
+      <Section bg="var(--color-bg-blur)" border={true}>
+        <Intro />
+      </Section>
 
-    <Section bg="var(--color-bg-blur)" border={true}>
-      <Intro />
-    </Section>
+      <Section bg="var(--color-bg-blur)" border={true}>
+        <Services />
+      </Section>
 
-    <Section bg="var(--color-bg-blur)" border={true}>
-      <Services />
-    </Section>
+      <Section border={true} pt="0" pr="0" pb="0" pl="0">
+        <Marquee direction="left" speed={60}>
+          <div>
+            If you are interested in working together, please{' '}
+            <a
+              href={site.mailTo}
+              target="_blank"
+              rel="noreferrer"
+              className="link e-resize"
+            >
+              email us ✌️
+            </a>
+            .
+          </div>
+          <div>
+            I am currently considering new work for 2023,{' '}
+            <a
+              href={site.mailTo}
+              target="_blank"
+              rel="noreferrer"
+              className="link e-resize"
+            >
+              reach out 🌞
+            </a>
+            .
+          </div>
+          <div>
+            If your project is aimed at crypto or decentralization, is
+            open-sourced, sustainable or educational,{' '}
+            <a
+              href={site.mailTo}
+              target="_blank"
+              rel="noreferrer"
+              className="link e-resize"
+            >
+              let&apos;s work together 🤝
+            </a>
+            .
+          </div>
+        </Marquee>
+      </Section>
 
-    <Section bg="var(--color-bg-blur)" border={true}>
-      <Team />
-    </Section>
+      <Section bg="var(--color-bg-blur)" border={true}>
+        <Team />
+      </Section>
 
-    <Section border={true}>
-      <DribbbleGrid />
-    </Section>
-  </S.Home>
-)
+      <Section border={true}>
+        <DribbbleGrid />
+      </Section>
+    </S.Home>
+  )
+}
 
 export default Home

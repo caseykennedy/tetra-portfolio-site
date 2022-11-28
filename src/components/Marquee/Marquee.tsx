@@ -9,13 +9,15 @@ import * as S from './styles.scss'
 
 type Props = {
   children: React.ReactNode
+  direction?: 'left' | 'right'
   speed?: number
 }
 
-const Marquee = ({ children, speed = 20 }: Props) => {
+const Marquee = ({ children, direction = 'left', speed = 40 }: Props) => {
   const MarqueeProps = {
+    direction,
     gradient: false,
-    pauseOnHover: false,
+    pauseOnHover: true,
     speed,
   }
   return (

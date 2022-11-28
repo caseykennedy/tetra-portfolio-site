@@ -16,7 +16,7 @@ const Buttons = css`
     --btn-padding-y: var(--space-sm);
     --btn-font-size: var(--text-root-size);
     --btn-font-weight: 600;
-    --btn-radius: var(--radius-lg);
+    --btn-radius: var(--radius);
   }
 
   /* [data-theme='darkMode'] {
@@ -25,6 +25,13 @@ const Buttons = css`
     --btn-secondary-bg: var(--color-secondary);
     --btn-secondary-color: var(--color-primary);
   } */
+
+  button {
+    background: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
 
   .btn {
     ${fontSmooth}
@@ -56,7 +63,7 @@ const Buttons = css`
     }
 
     svg {
-      width: 18px;
+      /* width: var(--icon-size); */
 
       path {
         fill: var(--color-bg);
@@ -69,14 +76,7 @@ const Buttons = css`
 
     &:hover {
       background: var(--color-text-muted);
-    }
-  }
-
-  .btn--secondary {
-    background: var(--color-text-muted);
-
-    &:hover {
-      background: var(--color-text);
+      color: var(--color-bg);
     }
   }
 

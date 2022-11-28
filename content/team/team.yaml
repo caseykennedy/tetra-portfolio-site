@@ -1,6 +1,6 @@
 - name: 'casey'
   position: 'technology'
-  experience: '14'
+  experience: '15'
   bio: 'Casey has a background in design and has made his way through a broad range of industries including DNS, domain registration, marketing, gaming and hospitality, and entertainment—his current focus includes web3, frontend and visual design.'
   avatar: './disco-casey.png'
 
@@ -13,5 +13,5 @@
 - name: 'taylor'
   position: 'strategy'
   experience: '15'
-  bio: 'Taylor has worked in creative production and development for immersive web and mobile advertising campaigns across many industries and brands—blockchain has been his focus since 2018.'
+  bio: 'Taylor has worked in creative production and development for immersive web and mobile advertising campaigns across many industries and brands— focusing on ideating strategies for clients utilizing blockchain protocols.'
   avatar: './disco-taylor.jpg'

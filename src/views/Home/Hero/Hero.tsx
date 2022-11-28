@@ -62,8 +62,7 @@ const Hero = () => {
               {/* Helping brands develop
               <br />
               cutting-edge digital experiences. */}
-              Tetra is a design and development studio for people, teams and
-              visionaries.
+              Tetra is a design and development studio for visionaries.
               {/* <br />
               <br />
               We believe the next generation of the internet (web3) will be

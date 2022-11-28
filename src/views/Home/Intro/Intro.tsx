@@ -21,7 +21,7 @@ const Intro = () => {
       <div className="title">
         <p>
           Approach
-          <span>Casual, conversational—direct and transformative.</span>
+          <span>Casual, conversational, direct and transformative.</span>
         </p>
       </div>
       <div className="message">

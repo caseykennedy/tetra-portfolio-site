@@ -80,6 +80,21 @@ export const Services = styled(motion.div)`
           font-weight: 700;
         }
       }
+
+      ul {
+        /* list-style: "• " inside; */
+
+        li {
+          margin-bottom: var(--space-xxxs);
+          transition: color var(--transition);
+        }
+      }
+
+      &:hover {
+        ul li {
+          color: var(--color-text);
+        }
+      }
     }
   }
 `

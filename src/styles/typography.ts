@@ -50,6 +50,10 @@ const Typography = css`
     --text-base-size: 1rem; // body font-size
     --text-scale-ratio: 1.25; // multiplier used to generate the type scale values 👇
 
+    @media ${breakpoint.tablet} {
+      --text-base-size: 0.975rem; // body font-size
+    }
+
     // font weight
     --body-font-weight: 400;
     --heading-font-weight: 400;
@@ -197,14 +201,10 @@ const Typography = css`
 
   h1,
   .text-h1 {
-    font-size: var(--text-xl);
+    font-size: var(--text-lg);
 
     @media ${breakpoint.tablet} {
-      font-size: var(--text-xxl);
-    }
-
-    @media ${breakpoint.desktop} {
-      font-size: var(--text-xxl);
+      font-size: var(--text-xl);
     }
   }
 

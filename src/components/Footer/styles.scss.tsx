@@ -11,14 +11,9 @@ export const Footer = styled.footer`
   display: flex;
   flex-flow: column nowrap;
   border-top: var(--border);
-  min-height: 55vh;
-
+  min-height: 33vh;
   position: relative;
   z-index: 1;
-
-  @media ${breakpoint.tablet} {
-    min-height: 44vh;
-  }
 
   .contact {
     flex: 1;
@@ -79,19 +74,20 @@ export const Footer = styled.footer`
     }
   }
 
-  .utils {
+  nav {
     display: flex;
     flex-flow: row-reverse nowrap;
     align-items: center;
     justify-content: space-between;
     padding: var(--gutter);
-    padding-bottom: var(--space-xl);
+    /* padding-bottom: var(--space-xl); */
 
     @media ${breakpoint.tablet} {
-      padding-bottom: var(--space-xxl);
+      /* padding-bottom: var(--space-xxl); */
     }
 
-    .control {
+    button,
+    a {
       color: var(--color-text-muted);
       text-decoration: none;
       transition: var(--transition-all);
@@ -101,18 +97,40 @@ export const Footer = styled.footer`
         color: var(--color-text);
         text-decoration: underline;
       }
+    }
 
-      &__index {
-        cursor: w-resize;
-      }
+    .routes {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      gap: var(--gutter);
 
-      &__top {
-        cursor: n-resize;
-        background: transparent;
-        border: none;
-        padding: 0;
+      &__email {
+        display: flex;
+        align-items: center;
+        gap: var(--space-sm);
+        color: var(--color-text);
+
+        span {
+          transform: translateX(calc(var(--space-xxxs) * -1));
+          svg {
+            transform: rotate(-90deg);
+            width: 9px;
+          }
+        }
+
+        :hover {
+          span {
+            transform: translateX(calc(var(--space-xxxs) * 0));
+          }
+        }
       }
     }
+  }
+
+  .footer-marquee {
+    border-top: var(--border);
+    width: 100%;
   }
 
   .info {
@@ -120,18 +138,12 @@ export const Footer = styled.footer`
     align-items: flex-end;
     border-top: var(--border);
     padding: var(--gutter);
-    padding-bottom: var(--space-xl);
 
-    @media ${breakpoint.tablet} {
-      padding-bottom: var(--space-xxl);
-    }
-
-    &__legal {
-      flex: 2;
+    & > * {
+      flex: 1;
     }
 
     &__links {
-      flex: 1;
       display: flex;
       flex-flow: column nowrap;
       justify-content: flex-end;

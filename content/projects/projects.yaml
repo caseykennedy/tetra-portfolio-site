@@ -1,9 +1,9 @@
 - title: 'dWeb Foundation'
-  tagline: 'Decentralize the internet.'
+  tagline: 'The future is open source. The internet is open.'
   slug: 'dweb'
   year: '2020'
-  desc: 'I needed a creative agency at the top of design thinking and leading edge in technical capabilities. core37 was a perfect match. They delivered the perfect end to end digital platform, on time and in full. I loved their creativity, their high quality standards and the strong partnership with my team.'
-  industry: 'blockchain'
+  desc: 'We believe in decentralizing power wherever possible. When the dWeb Foundation approached us to create an identity, website and series of presentations for a round of incubations, we set out to create an energetic and futuristic identity built-by-the-blockchain.'
+  industry: 'crypto'
   category: 'case study'
   color: 'purple'
   images: 'dweb'
@@ -15,11 +15,11 @@
     - development
 
 - title: 'Discoin'
-  tagline: 'Cardano Disco Solaris Discoin'
+  tagline: 'Baby steps towards the first off-world city.'
   slug: 'discoin'
   year: '2022'
-  desc: Cardano Discoin
-  industry: 'Blockchain'
+  desc: 'Disco Solaris is a story-driven retrotopia on the Cardano blockchain where you can mint an algorithmically generated PFP CNFT to travel Neo Miami, a cyberpunk futuristic world. Our work focused on creating a simple but powerful brand identity and design language that could serve the protocol and help the story expand.'
+  industry: 'crypto'
   category: 'case study'
   color: '#82726b'
   images: 'discoin'
@@ -27,14 +27,13 @@
   services:
     - branding
     - logo identity
-  website: 'discoin.com'
 
 - title: 'ArGo App'
-  tagline: 'Deploy the new web.'
+  tagline: 'Power to the people. Deploy the new web.'
   slug: 'argoapp'
   year: '2020'
-  desc: Bottle Barn is Sonoma County's largest discount wine and spirits shop. Their goal was to bring their shop online. We designed them a humble identity and a custom Shopify theme and delivered a fully functional, ent to end digital platform to sell wine and keep in touch with their shoppers.
-  industry: 'Blockchain'
+  desc: 'As part of our efforts to work with the pioneers creating a decentralized world, we teamed up with ArgoApp Decentralized Blockchain Hosting to create a clean and approachable, tech-friendly image representing security, simplicity and the expansion of something limitless.'
+  industry: 'crypto'
   category: 'case study'
   color: '#82726b'
   images: 'argoapp'
@@ -43,14 +42,13 @@
     - branding
     - logo identity
     - ui + ux
-  website: 'argoapp.com'
 
-- title: 'Jael Cartel'
-  tagline: 'The Jael Cartel'
+- title: 'JAEL Cartel'
+  tagline: 'Creators, innovators and degens, one big family. '
   slug: 'jael'
   year: '2022'
-  desc: The JAEL Cartel.
-  industry: 'Blockchain'
+  desc: 'What do you get when you combine smarts with attitude? JAEL Cartel is an international crew of blockchain-based innovators creating some of tomorrow’s most dynamic crypto projects. Our task was to create and design a unique and iconic, crypto-native identity that could serve as the outfit’s banner and call to arms.'
+  industry: 'crypto'
   category: 'case study'
   color: '#82726b'
   images: 'jael'

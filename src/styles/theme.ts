@@ -15,7 +15,7 @@ const Theme = css`
     --icon-size: 1rem;
 
     // Radius
-    --radius: 0.75rem; // border radius base size
+    --radius: 0.5rem; // border radius base size
     --radius-xs: calc(var(--radius) / 3);
     --radius-sm: calc(var(--radius) / 2);
     --radius-md: calc(var(--radius) * 2);
@@ -23,7 +23,7 @@ const Theme = css`
     --radius-full: 50%;
 
     @media ${breakpoint.tablet} {
-      --radius: 1rem; // border radius base size
+      --radius: 0.75rem; // border radius base size
     }
 
     // transitions
