@@ -15,4 +15,6 @@ export const wrapPageElement = ({ element, props }) => (
   </>
 )
 
-export const wrapRootElement = ({ element }) => element
+// export const wrapRootElement = ({ element }) => element
+
+export default wrapPageElement

@@ -4,9 +4,6 @@ import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 
-// Hooks
-import useDate from '../../../hooks/useDate'
-
 // Styles
 import * as S from './styles.scss'
 
@@ -61,7 +58,7 @@ const Team = () => {
   const team = data.team.edges
   return (
     <S.Team>
-      <div className="title">
+      <div className="heading">
         <p>
           Team
           <span>At your service.</span>
@@ -80,9 +77,9 @@ const Team = () => {
               </div>
               <div className="partner__info__person">
                 <div className="partner__info__name">{person.name}</div>
-                <div className="partner__info__position">
+                <div className="partner__info__meta">
                   <div>{person.position}</div>
-                  <div>{person.experience} years xp</div>
+                  <div className="experience">{person.experience} years xp</div>
                 </div>
               </div>
             </div>

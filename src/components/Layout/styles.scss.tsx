@@ -2,6 +2,7 @@
 
 // ___________________________________________________________________
 
+import { motion } from "framer-motion"
 import styled from 'styled-components'
 import breakpoint from '../../utils/breakpoint'
 
@@ -47,7 +48,7 @@ export const Wrapper = styled.div`
   } */
 `
 
-export const Content = styled.div`
+export const Content = styled(motion.main)`
   flex: 1;
   display: flex;
 

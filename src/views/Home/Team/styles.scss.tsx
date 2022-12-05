@@ -9,7 +9,7 @@ export const Team = styled(motion.div)`
   flex-flow: column nowrap;
   gap: var(--gutter);
 
-  .title {
+  .heading {
     flex: 1;
     display: flex;
     flex-flow: column nowrap;
@@ -80,13 +80,22 @@ export const Team = styled(motion.div)`
           text-transform: capitalize;
         }
 
-        &__position {
+        &__meta {
           display: flex;
           flex-flow: row nowrap;
-          justify-content: space-between;
-
+          gap: var(--gutter);
           color: var(--color-text-muted);
-          padding-right: var(--space-xxl);
+
+          & > * {
+            flex: 1;
+          }
+
+          .experience {
+            margin-left: var(--gutter);
+            padding-left: var(--gutter);
+
+            border-left: var(--border);
+          }
         }
       }
     }

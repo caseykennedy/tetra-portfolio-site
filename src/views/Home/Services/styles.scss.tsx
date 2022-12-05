@@ -9,7 +9,7 @@ export const Services = styled(motion.div)`
   flex-flow: column nowrap;
   gap: var(--gutter);
 
-  .title {
+  .heading {
     flex: 1;
     display: flex;
     flex-flow: column nowrap;
@@ -82,7 +82,7 @@ export const Services = styled(motion.div)`
       }
 
       ul {
-        /* list-style: "• " inside; */
+        list-style: circle inside;
 
         li {
           margin-bottom: var(--space-xxxs);

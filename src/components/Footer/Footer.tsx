@@ -12,7 +12,6 @@ import * as S from './styles.scss'
 import useSiteSettings from '../../hooks/useSiteSettings'
 
 // Components
-import Icon from '../Icons'
 import Marquee from '../Marquee'
 
 // ___________________________________________________________________
@@ -45,11 +44,6 @@ const Footer = ({ location }: FooterProps) => {
           <h2 className="text-h1">Let&apos;s build something great.</h2>
         </div>
         <div className="contact__details">
-          {/* <div>
-            west coast based
-            <br />
-            <span>{nevadaTime}</span>
-          </div> */}
           <div>
             contact
             <br />
@@ -79,7 +73,6 @@ const Footer = ({ location }: FooterProps) => {
             className="routes__email e-resize"
           >
             email us
-            {/* <Icon name="arrow" /> */}
           </a>
         </div>
       </nav>
@@ -96,7 +89,6 @@ const Footer = ({ location }: FooterProps) => {
             >
               email us ✌️
             </a>
-            .
           </div>
           <div>
             We are currently considering new work for 2023,{' '}
@@ -108,7 +100,6 @@ const Footer = ({ location }: FooterProps) => {
             >
               reach out 🌞
             </a>
-            .
           </div>
           <div>
             If your project is aimed at crypto or decentralization, is
@@ -121,7 +112,6 @@ const Footer = ({ location }: FooterProps) => {
             >
               let&apos;s work together 🤝
             </a>
-            .
           </div>
         </Marquee>
       </div>

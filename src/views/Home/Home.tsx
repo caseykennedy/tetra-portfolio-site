@@ -52,10 +52,9 @@ const Home = () => {
             >
               email us ✌️
             </a>
-            .
           </div>
           <div>
-            I am currently considering new work for 2023,{' '}
+            We are currently considering new work for 2023,{' '}
             <a
               href={site.mailTo}
               target="_blank"
@@ -64,7 +63,6 @@ const Home = () => {
             >
               reach out 🌞
             </a>
-            .
           </div>
           <div>
             If your project is aimed at crypto or decentralization, is
@@ -77,7 +75,6 @@ const Home = () => {
             >
               let&apos;s work together 🤝
             </a>
-            .
           </div>
         </Marquee>
       </Section>

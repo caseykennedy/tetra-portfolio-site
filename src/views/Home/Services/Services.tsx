@@ -112,7 +112,7 @@ const Services = () => {
   const nevadaTime = useDate()
   return (
     <S.Services>
-      <div className="title">
+      <div className="heading">
         <p>
           Capabilities
           <span>
