@@ -6,7 +6,7 @@ import { breakpoint } from '../../styles/mixins'
 
 // ___________________________________________________________________
 
-export const ProjectDetail = styled.div`
+export const ProjectDetail = styled.main`
   display: flex;
   flex-flow: column nowrap;
   padding-top: var(--space-lg);
@@ -99,18 +99,18 @@ export const Gallery = styled.div`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-auto-rows: auto;
-  gap: var(--gutter);
+  gap: var(--space-xxxs);
 
   @media ${breakpoint.tablet} {
     grid-template-columns: repeat(2, 1fr);
   }
 
   div {
-    border-radius: var(--radius);
+    /* border-radius: var(--radius); */
     overflow: hidden;
 
     img {
-      border-radius: var(--radius);
+      /* border-radius: var(--radius); */
       overflow: hidden;
     }
   }
@@ -159,7 +159,7 @@ export const PrevNext = styled.div`
       }
     }
 
-    .gatsby-image-wrapper {
+    /* .gatsby-image-wrapper {
       border-radius: var(--radius);
       overflow: hidden;
 
@@ -167,6 +167,6 @@ export const PrevNext = styled.div`
         border-radius: var(--radius);
         overflow: hidden;
       }
-    }
+    } */
   }
 `

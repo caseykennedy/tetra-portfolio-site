@@ -17,6 +17,7 @@ export const Team = styled(motion.div)`
     position: relative;
 
     p {
+      color: var(--color-text-bright);
       max-width: 26ch;
 
       span {
@@ -43,9 +44,15 @@ export const Team = styled(motion.div)`
     }
 
     .partner {
+      background: var(--color-bg);
+      border-radius: var(--radius);
+      border-top: var(--border);
+      border-bottom: var(--border);
+      padding: var(--gutter);
+
       @media ${breakpoint.tablet} {
         &:first-child {
-          padding-bottom: var(--space-xxl);
+          padding-bottom: var(--gutter);
         }
       }
 
@@ -55,9 +62,7 @@ export const Team = styled(motion.div)`
         align-items: center;
         gap: var(--gutter);
 
-        border-bottom: var(--border);
         margin-bottom: var(--gutter);
-        padding-bottom: var(--gutter);
 
         &__avatar {
           border: var(--border);
@@ -75,6 +80,7 @@ export const Team = styled(motion.div)`
         }
 
         &__name {
+          color: var(--color-text-bright);
           font-size: var(--text-md);
           font-weight: 700;
           text-transform: capitalize;

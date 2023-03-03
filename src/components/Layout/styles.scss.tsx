@@ -48,7 +48,7 @@ export const Wrapper = styled.div`
   } */
 `
 
-export const Content = styled(motion.main)`
+export const Content = styled(motion.div)`
   flex: 1;
   display: flex;
 

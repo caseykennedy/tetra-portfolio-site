@@ -16,7 +16,6 @@ import Marquee from '../Marquee'
 
 // ___________________________________________________________________
 
-const mailTo = 'mailto:info@tetrashapes.com'
 const twitterURL = 'https://twitter.com/tetrashapes'
 const handshakeURL = 'https://handshake.org'
 const discordURL = 'https://discord.gg/8qZ7Y4'
@@ -47,7 +46,7 @@ const Footer = ({ location }: FooterProps) => {
           <div>
             contact
             <br />
-            <a href={mailTo} target="_blank" rel="noreferrer" className="link">
+            <a href={site.mailTo} target="_blank" rel="noreferrer" className="link">
               info@tetrashapes.com
             </a>
           </div>
@@ -78,7 +77,7 @@ const Footer = ({ location }: FooterProps) => {
       </nav>
 
       <div className="footer-marquee">
-        <Marquee direction="left" speed={60}>
+        <Marquee direction="left" speed={70}>
           <div>
             If you are interested in working together, please{' '}
             <a

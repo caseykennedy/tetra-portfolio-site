@@ -22,6 +22,7 @@ export const Intro = styled(motion.div)`
     position: relative;
 
     p {
+      color: var(--color-text-bright);
       max-width: 22ch;
       position: sticky;
       top: var(--gutter);

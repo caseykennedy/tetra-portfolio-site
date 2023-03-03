@@ -18,7 +18,7 @@ module.exports = {
   ogSiteName: 'tetra', // Facebook Site Name
   ogLanguage: 'en-US', // og:language
 
-  mailTo: 'mailto:taylor@tetrashapes.com',
+  mailTo: 'mailto:info@tetrashapes.com',
 
   googleTagID: 'UA-XXXXX-X',
 

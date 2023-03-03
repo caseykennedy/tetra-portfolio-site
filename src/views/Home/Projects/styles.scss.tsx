@@ -13,7 +13,7 @@ export const Projects = styled.div`
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-auto-rows: auto;
-    gap: var(--gutter);
+    gap: var(--space-xxxs);
 
     width: 100%;
 
@@ -23,23 +23,23 @@ export const Projects = styled.div`
   }
 
   .project {
-    border-radius: var(--radius);
+    /* border-radius: var(--radius); */
     overflow: hidden;
     position: relative;
     /* margin-bottom: var(--space-xl); */
 
     a {
-      border-radius: var(--radius);
+      /* border-radius: var(--radius); */
       overflow: hidden;
     }
 
     &__item {
       .gatsby-image-wrapper {
-        border-radius: var(--radius);
+        /* border-radius: var(--radius); */
         overflow: hidden;
 
         img {
-          border-radius: var(--radius);
+          /* border-radius: var(--radius); */
           overflow: hidden;
         }
       }
@@ -53,7 +53,7 @@ export const Projects = styled.div`
       background-color: var(--color-black);
       border: var(--border);
       border-color: hsl(245, 8%, 18%);
-      border-radius: var(--radius-sm);
+      /* border-radius: var(--radius-sm); */
       padding: var(--gutter);
 
       position: absolute;

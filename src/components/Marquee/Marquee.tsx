@@ -13,7 +13,7 @@ type Props = {
   speed?: number
 }
 
-const Marquee = ({ children, direction = 'left', speed = 40 }: Props) => {
+const Marquee = ({ children, direction = 'left', speed = 70 }: Props) => {
   const MarqueeProps = {
     direction,
     gradient: false,

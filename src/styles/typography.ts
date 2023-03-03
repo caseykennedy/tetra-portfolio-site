@@ -47,7 +47,7 @@ const Typography = css`
 
     // font size
     --text-root-size: 1rem;
-    --text-base-size: 1rem; // body font-size
+    --text-base-size: 1.1rem; // body font-size
     --text-scale-ratio: 1.25; // multiplier used to generate the type scale values 👇
 
     @media ${breakpoint.tablet} {

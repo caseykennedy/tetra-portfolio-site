@@ -28,7 +28,7 @@ const Home = () => {
     <S.Home>
       <Hero />
 
-      <Section border={true}>
+      <Section border={true} pb="var(--gutter)">
         <Projects />
       </Section>
 
@@ -41,7 +41,7 @@ const Home = () => {
       </Section>
 
       <Section border={true} pt="0" pr="0" pb="0" pl="0">
-        <Marquee direction="left" speed={60}>
+        <Marquee direction="left" speed={70}>
           <div>
             If you are interested in working together, please{' '}
             <a

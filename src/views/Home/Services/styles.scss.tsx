@@ -17,6 +17,7 @@ export const Services = styled(motion.div)`
     position: relative;
 
     p {
+      color: var(--color-text-bright);
       max-width: 26ch;
 
       span {
@@ -52,7 +53,8 @@ export const Services = styled(motion.div)`
         height: 75px;
 
         background: var(--color-bg);
-        border: var(--border);
+        border-top: var(--border);
+        border-bottom: var(--border);
         border-radius: var(--radius);
 
         @media ${breakpoint.tablet} {
@@ -76,6 +78,7 @@ export const Services = styled(motion.div)`
         }
 
         .name {
+          color: var(--color-text-bright);
           font-size: var(--text-md);
           font-weight: 700;
         }

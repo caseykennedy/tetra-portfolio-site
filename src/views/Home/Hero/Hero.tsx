@@ -16,7 +16,7 @@ import * as S from './styles.scss'
 
 // ___________________________________________________________________
 
-const mailTo = 'mailto:taylor@tetrashapes.com'
+const mailTo = 'mailto:info@tetrashapes.com'
 
 const HeroCanvas = () => (
   <S.Tetra>
