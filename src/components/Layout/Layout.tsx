@@ -1,13 +1,11 @@
 // Layout:
 // ___________________________________________________________________
 
-import React, { useEffect } from 'react'
-import { useDarkMode } from 'usehooks-ts'
+import React from 'react'
 
 // Components
 import Header from '../Header'
 import Footer from '../Footer'
-// import SmoothScroll from '../SmoothScroll'
 
 // Styles + Theme
 import * as S from './styles.scss'

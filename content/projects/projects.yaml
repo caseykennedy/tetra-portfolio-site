@@ -1,60 +1,138 @@
-- title: 'dWeb Foundation'
+- client: 'dWeb Foundation'
   tagline: 'The future is open source. The internet is open.'
   slug: 'dweb'
   year: '2020'
-  desc: 'We believe in decentralizing power wherever possible. When the dWeb Foundation approached us to create an identity, website and series of presentations for a round of incubations, we set out to create an energetic and futuristic identity built-by-the-blockchain.'
+  website: 'decentralizedinter.net'
+  repository: 'https://github.com/caseykennedy/dWeb-f'
   industry: 'crypto'
   category: 'case study'
   color: 'purple'
   images: 'dweb'
   cover: './dweb/cover.png'
+  desc: 'dWeb Foundation is a community-organized effort charting the frontier toward a decentralized internet, with  handshake at the root.'
+  process:
+    - 'We believe in decentralizing power wherever possible. When the dWeb Foundation approached us to create an identity, website and series of presentations for a round of incubations, we set out to create an energetic and futuristic identity built-by-the-blockchain.'
+  tasks:
+    - 'Build a simple, smart brand.'
+    - 'Create a modern identity.'
+    - 'Design and develop an informative website and blog.'
+    - 'Integrate a headless CMS.'
   services:
     - branding
     - logo identity
     - ui design
     - development
+    - CMS integration
 
-- title: 'Discoin'
+- client: 'Discoin'
   tagline: 'Baby steps towards the first off-world city.'
   slug: 'discoin'
   year: '2022'
-  desc: 'Disco Solaris is a story-driven retrotopia on the Cardano blockchain where you can mint an algorithmically generated PFP CNFT to travel Neo Miami, a cyberpunk futuristic world. Our work focused on creating a simple but powerful brand identity and design language that could serve the protocol and help the story expand.'
+  desc: 'Disco Solaris is a story-driven retrotopia on the Cardano blockchain where you can mint an algorithmically generated PFP CNFT to travel Neo Miami, a cyberpunk futuristic world.'
+  process:
+    - 'Our work focused on creating a simple but powerful brand identity and design language that could serve the protocol and help the story expand.'
   industry: 'crypto'
   category: 'case study'
   color: '#82726b'
   images: 'discoin'
   cover: './discoin/cover.png'
+  tasks:
+    - 'Design a brand identity system.'
+    - 'Explore brand language and message.'
   services:
     - branding
     - logo identity
 
-- title: 'ArGo App'
+- client: 'ArGo App'
   tagline: 'Power to the people. Deploy the new web.'
   slug: 'argoapp'
   year: '2020'
-  desc: 'As part of our efforts to work with the pioneers creating a decentralized world, we teamed up with ArgoApp Decentralized Blockchain Hosting to create a clean and approachable, tech-friendly image representing security, simplicity and the expansion of something limitless.'
+  desc: 'ArgoApp is the future of decentralized blockchain hosting.'
+  process:
+    - 'As part of our efforts to work with the pioneers creating a decentralized world, we teamed up with ArgoApp Decentralized Blockchain Hosting to create a clean and approachable, tech-friendly image representing security, simplicity and the expansion of something limitless.'
   industry: 'crypto'
   category: 'case study'
   color: '#82726b'
   images: 'argoapp'
   cover: './argoapp/cover.png'
+  tasks:
+    - 'Design a clean and approachable brand experience.'
+    - 'Explore an inviting app UI.'
   services:
     - branding
     - logo identity
     - ui + ux
 
-- title: 'JAEL Cartel'
+- client: 'JAEL Cartel'
   tagline: 'Creators, innovators and degens, one big family. '
   slug: 'jael'
   year: '2022'
-  desc: 'What do you get when you combine smarts with attitude? JAEL Cartel is an international crew of blockchain-based innovators creating some of tomorrow’s most dynamic crypto projects. Our task was to create and design a unique and iconic, crypto-native identity that could serve as the outfit’s banner and call to arms.'
+  desc: 'What do you get when you combine smarts with attitude? JAEL Cartel is an international crew of blockchain-based innovators creating some of tomorrow’s most dynamic crypto projects.'
+  process:
+    - 'Our task was to create and design a unique and iconic, crypto-native identity that could serve as the outfit’s banner and call to arms.'
   industry: 'crypto'
   category: 'case study'
   color: '#82726b'
   images: 'jael'
   cover: './jael/cover.png'
+  tasks:
+    - 'Build a sophisticated brand experience.'
+    - 'Design a new identity system.'
+    - 'Create a design system for the token swap UI.'
+    - 'Build out the new front-end in vue.'
   services:
     - branding
     - logo identity
     - event space
-  website: 'jaelcartel.com'
+
+- client: 'Miner49'
+  slug: 'miner49'
+  images: 'miner49'
+  cover: './miner49/miner-00.png'
+  tagline: 'The transactability of crypto, the safety of gold.'
+  desc: 'Miner49 is a utility token that tokenizes the service of gold mining while providing the safety of gold to make trades.'
+  process:
+    - 'Miner49 quickly became one of our favorite teams to work with. We were tasked with refactoring the companies identity, brand and web3 swap app. While exploring the brand and identity, we simultaneously dove into the design system and implementations within their vue app.'
+    - 'After a few rounds of research and ideation, we created a clean, modern UI and UX delivering the user a robust dashboard experience and token swap interface.'
+    - 'We completely renovated their front-end, ripping out vuetify and replacing it with a custom SASS system complete with scalable typography, light and dark modes and global utility classes. In addition, we rebuilt each component and refactored the state managment using VueX.'
+  tasks:
+    - 'Build a sophisticated brand experience.'
+    - 'Design a new identity system.'
+    - 'Create a design system for the token swap UI.'
+    - 'Build out the new front-end in vue.'
+  services:
+    - branding
+    - logo identity
+    - ui design
+    - dApp development
+  year: '2022'
+  industry: 'crypto'
+  category: 'case study'
+  color: 'blue'
+  website: 'minertoken.io'
+  repository: ''
+
+- client: 'Bob Wallet'
+  tagline: 'A Handshake wallet in your browser.'
+  industry: 'crypto'
+  website: 'bobwallet.io'
+  repository: 'https://github.com/kyokan/bob-extension'
+  slug: 'bob-extension'
+  year: '2021'
+  images: 'bob-extension'
+  cover: './bob-extension/bob-00.png'
+  category: 'case study'
+  color: 'blue'
+  desc: 'Bob Wallet Extension runs a wallet in your web browser and enables DNS resolving through the Handshake DNS. It also allows you to manage your Handshake TLDs and transfer HNS tokens.'
+  tasks:
+    - 'Refactor the UI and theme.'
+    - 'Integrate multiple account creation and administration.'
+    - 'Integrate Ledger hardware wallet support.'
+  process:
+    - 'This project required a deep dive into react, redux and chrome extensions—as well as several new APIs which communicate with the handshake blockchain and ledger hardware devices.'
+    - 'Tasks included writing async/await functions, data mutations and serialization, cross window message passing, building views and layouts, and extending background services written in JS and NODE.'
+  services:
+    - 'design'
+    - 'full-stack development'
+    - 'API integration'
+    - 'ledger hardware integration'

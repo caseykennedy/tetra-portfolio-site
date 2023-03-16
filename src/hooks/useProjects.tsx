@@ -12,17 +12,8 @@ const useProjects = () => {
         edges {
           node {
             category
+            client
             color
-            desc
-            id
-            images
-            industry
-            services
-            slug
-            title
-            tagline
-            website
-            year
             cover {
               childImageSharp {
                 gatsbyImageData(
@@ -35,12 +26,23 @@ const useProjects = () => {
                 )
               }
             }
+            desc
+            id
+            industry
+            process
+            repository
+            services
+            slug
+            tagline
+            tasks
+            website
+            year
           }
           previous {
+            client
             desc
             id
             slug
-            title
             cover {
               childImageSharp {
                 gatsbyImageData(
@@ -55,10 +57,10 @@ const useProjects = () => {
             }
           }
           next {
+            client
             desc
             id
             slug
-            title
             cover {
               childImageSharp {
                 gatsbyImageData(

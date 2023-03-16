@@ -12,9 +12,9 @@ import Marquee from '../../components/Marquee'
 
 // Sections
 import Hero from './Hero'
-import Intro from './Intro'
+import Approach from './Approach'
 import Projects from './Projects'
-import Services from './Services'
+import Capabilities from './Capabilities'
 import Team from './Team'
 
 // Styles
@@ -33,11 +33,11 @@ const Home = () => {
       </Section>
 
       <Section bg="var(--color-bg-blur)" border={true}>
-        <Intro />
+        <Approach />
       </Section>
 
       <Section bg="var(--color-bg-blur)" border={true}>
-        <Services />
+        <Capabilities />
       </Section>
 
       <Section border={true} pt="0" pr="0" pb="0" pl="0">

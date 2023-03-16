@@ -56,7 +56,7 @@ export const Team = styled(motion.div)`
         }
       }
 
-      &__info {
+      &__meta {
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
@@ -75,15 +75,36 @@ export const Team = styled(motion.div)`
           }
         }
 
-        &__person {
+        &__detail {
           flex: 1;
-        }
+          display: flex;
+          flex-flow: row nowrap;
+          align-items: center;
+          justify-content: space-between;
 
-        &__name {
-          color: var(--color-text-bright);
-          font-size: var(--text-md);
-          font-weight: 700;
-          text-transform: capitalize;
+          &__name {
+            display: flex;
+            flex-flow: column nowrap;
+
+            color: var(--color-text-bright);
+            font-size: var(--text-md);
+            font-weight: 700;
+            text-transform: capitalize;
+
+            span {
+              color: var(--color-text-muted);
+              font-size: var(--text-base-size);
+              font-weight: 600;
+            }
+          }
+
+          &__xp {
+            background: var(--color-text);
+            border: var(--border);
+            border-radius: var(--radius-lg);
+            color: var(--color-bg);
+            padding: var(--space-xxs) var(--space-sm);
+          }
         }
 
         &__meta {
@@ -96,11 +117,9 @@ export const Team = styled(motion.div)`
             flex: 1;
           }
 
-          .experience {
-            margin-left: var(--gutter);
-            padding-left: var(--gutter);
-
-            border-left: var(--border);
+          &__experience {
+            padding: var(--gutter);
+            border: var(--border);
           }
         }
       }

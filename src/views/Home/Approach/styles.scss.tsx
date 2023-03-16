@@ -1,31 +1,44 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 import { breakpoint } from '../../../styles/mixins'
 
 // ___________________________________________________________________
 
-export const Approach = styled.div`
+export const Approach = styled(motion.div)`
   display: flex;
-  align-items: flex-start;
+  flex-flow: column nowrap;
   gap: var(--gutter);
 
-  height: 75vh;
-  padding: var(--gutter);
-  position: relative;
+  @media ${breakpoint.tablet} {
+    flex-flow: row nowrap;
+    justify-content: stretch;
+  }
 
-  width: 100%;
-
-  & > div {
+  .heading {
     flex: 1;
-    position: sticky;
-    top: calc(var(--header-height) + calc(var(--gutter) + var(--space-xl)));
+    display: flex;
+    flex-flow: column nowrap;
+    margin-bottom: var(--space-xxxxl);
+    position: relative;
 
-    @media ${breakpoint.tablet} {
-      flex: 0.5;
+    p {
+      color: var(--color-text-bright);
+      max-width: 22ch;
+      position: sticky;
+      top: var(--gutter);
+
+      span {
+        color: var(--color-text-muted);
+        display: block;
+      }
     }
   }
 
-  .accordion-inner {
-    padding-bottom: var(--space-lg);
+  .message {
+    flex: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    position: relative;
   }
 `
 

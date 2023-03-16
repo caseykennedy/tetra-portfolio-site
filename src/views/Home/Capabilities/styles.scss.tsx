@@ -4,7 +4,7 @@ import { breakpoint } from '../../../styles/mixins'
 
 // ___________________________________________________________________
 
-export const Services = styled(motion.div)`
+export const Capabilities = styled(motion.div)`
   display: flex;
   flex-flow: column nowrap;
   gap: var(--gutter);
@@ -60,28 +60,29 @@ export const Services = styled(motion.div)`
         @media ${breakpoint.tablet} {
           height: 150px;
         }
+      }
 
-        .integer {
-          display: flex;
-          align-items: center;
-          justify-content: center;
+      &__id {
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-          padding: var(--space-xxxs);
-          height: 11px;
-          width: 11px;
+        padding: var(--space-xxxs);
+        height: 11px;
+        width: 11px;
 
-          border: var(--border);
-          border-radius: var(--radius-full);
+        background: var(--color-text);
+        color: var(--color-bg);
+        border-radius: var(--radius-full);
 
-          font-size: var(--text-sm);
-          font-weight: 700;
-        }
+        font-size: var(--text-sm);
+        font-weight: 700;
+      }
 
-        .name {
-          color: var(--color-text-bright);
-          font-size: var(--text-md);
-          font-weight: 700;
-        }
+      &__name {
+        color: var(--color-text-bright);
+        font-size: var(--text-md);
+        font-weight: 700;
       }
 
       ul {
@@ -102,4 +103,4 @@ export const Services = styled(motion.div)`
   }
 `
 
-export default Services
+export default Capabilities

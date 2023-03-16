@@ -46,7 +46,12 @@ const Footer = ({ location }: FooterProps) => {
           <div>
             contact
             <br />
-            <a href={site.mailTo} target="_blank" rel="noreferrer" className="link">
+            <a
+              href={site.mailTo}
+              target="_blank"
+              rel="noreferrer"
+              className="link"
+            >
               info@tetrashapes.com
             </a>
           </div>

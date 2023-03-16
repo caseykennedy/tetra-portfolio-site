@@ -58,6 +58,7 @@ export const Projects = styled.div`
 
       position: absolute;
       top: var(--gutter);
+      right: var(--gutter);
       left: var(--gutter);
       /* height: 100%; */
       /* width: 100%; */

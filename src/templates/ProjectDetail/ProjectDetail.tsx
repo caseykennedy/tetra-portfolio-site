@@ -36,7 +36,7 @@ const PrevNext = ({ pageContext }: PrevNextShape) => {
         {previous && (
           <Link to={`/projects/${previous.slug}`}>
             <div className="detail">
-              {pageContext.previous.title}
+              {pageContext.previous.client}
               <div>previous</div>
             </div>
             <GatsbyImage
@@ -52,7 +52,7 @@ const PrevNext = ({ pageContext }: PrevNextShape) => {
         {next && (
           <Link to={`/projects/${next.slug}`}>
             <div className="detail">
-              {pageContext.next.title}
+              {pageContext.next.client}
               <div>next</div>
             </div>
             <GatsbyImage
@@ -78,7 +78,7 @@ const ProjectDetail = ({ data, pageContext }: ProjectDataShape) => {
     <S.ProjectDetail>
       <Section>
         <div className="project-title">
-          <h1>{page.title}</h1>
+          <h1>{page.client}</h1>
           <p>{page.tagline}</p>
         </div>
       </Section>
@@ -92,28 +92,67 @@ const ProjectDetail = ({ data, pageContext }: ProjectDataShape) => {
           <h2 className="text-h3">Project details</h2>
           <div className="details__summary">
             <p className="lead">{page.desc}</p>
+            <h3>Objectives:</h3>
+            <ol>
+              {page.tasks.map((item, idx) => (
+                <li key={idx}>{item}</li>
+              ))}
+            </ol>
+            {page.process.map((para, idx) => (
+              <p key={idx}>{para}</p>
+            ))}
             <div className="details__meta">
               <div className="details__meta__col">
                 <div>
                   Client
-                  <span>{page.title}</span>
+                  <span>{page.client}</span>
                 </div>
                 <div>
                   Year
                   <span>{page.year}</span>
                 </div>
-              </div>
-              <div className="details__meta__col">
                 <div>
                   Industry
                   <span>{page.industry}</span>
                 </div>
+                {page.website ? (
+                  <div>
+                    Website
+                    <span>
+                      <a
+                        href={`http://${page.website}`}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="link ne-resize"
+                      >
+                        {page.website}
+                      </a>
+                    </span>
+                  </div>
+                ) : null}
+              </div>
+              <div className="details__meta__col">
                 <div>
                   Services
                   {page.services.map((service, idx) => (
                     <span key={idx}>{service}</span>
                   ))}
                 </div>
+                {page.repository ? (
+                  <div>
+                    Repository
+                    <span>
+                      <a
+                        href={page.repository}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="link ne-resize"
+                      >
+                        GitHub
+                      </a>
+                    </span>
+                  </div>
+                ) : null}
               </div>
             </div>
           </div>
@@ -133,15 +172,17 @@ export const query = graphql`
   query ($slug: String!) {
     project: projectsYaml(slug: { eq: $slug }) {
       category
+      client
       color
       desc
       id
-      images
       industry
+      process
+      repository
       services
       slug
-      title
       tagline
+      tasks
       website
       year
     }

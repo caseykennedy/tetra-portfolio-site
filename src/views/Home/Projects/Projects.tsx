@@ -98,7 +98,7 @@ const Projects = () => {
               <motion.div variants={itemVariants} className="project__meta">
                 <div className="title">
                   <span>
-                    <strong>{item.title}</strong>
+                    <strong>{item.client}</strong>
                   </span>
                 </div>
                 <motion.ul variants={listVariants}>

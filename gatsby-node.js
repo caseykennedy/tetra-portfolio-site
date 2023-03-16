@@ -22,17 +22,8 @@ async function createProjectPostPages(graphql, actions) {
         edges {
           node {
             category
+            client
             color
-            desc
-            id
-            images
-            industry
-            services
-            slug
-            title
-            tagline
-            website
-            year
             cover {
               childImageSharp {
                 gatsbyImageData(
@@ -43,12 +34,23 @@ async function createProjectPostPages(graphql, actions) {
                 )
               }
             }
+            desc
+            id
+            industry
+            process
+            repository
+            services
+            slug
+            tagline
+            tasks
+            website
+            year
           }
           previous {
+            client
             desc
             id
             slug
-            title
             cover {
               childImageSharp {
                 gatsbyImageData(
@@ -61,10 +63,10 @@ async function createProjectPostPages(graphql, actions) {
             }
           }
           next {
+            client
             desc
             id
             slug
-            title
             cover {
               childImageSharp {
                 gatsbyImageData(

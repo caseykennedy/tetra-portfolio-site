@@ -10,6 +10,7 @@ import TetraGeo from '../../../components/TetraGeo'
 
 // Hooks
 import useDate from '../../../hooks/useDate'
+import useSiteSettings from '../../../hooks/useSiteSettings'
 
 // Styles
 import * as S from './styles.scss'
@@ -52,6 +53,7 @@ const HeroCanvas = () => (
 )
 
 const Hero = () => {
+  const site = useSiteSettings()
   const nevadaTime = useDate()
   return (
     <>
@@ -88,7 +90,7 @@ const Hero = () => {
               contact
               <br />
               <a
-                href={mailTo}
+                href={site.mailTo}
                 target="_blank"
                 rel="noreferrer"
                 className="link"
