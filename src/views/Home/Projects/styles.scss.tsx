@@ -23,26 +23,10 @@ export const Projects = styled.div`
   }
 
   .project {
-    /* border-radius: var(--radius); */
     overflow: hidden;
     position: relative;
-    /* margin-bottom: var(--space-xl); */
-
-    a {
-      /* border-radius: var(--radius); */
-      overflow: hidden;
-    }
 
     &__item {
-      .gatsby-image-wrapper {
-        /* border-radius: var(--radius); */
-        overflow: hidden;
-
-        img {
-          /* border-radius: var(--radius); */
-          overflow: hidden;
-        }
-      }
     }
 
     &__meta {
@@ -58,10 +42,10 @@ export const Projects = styled.div`
 
       position: absolute;
       top: var(--gutter);
-      right: var(--gutter);
       left: var(--gutter);
       /* height: 100%; */
       /* width: 100%; */
+      max-width: calc(100% - calc(var(--gutter) * 2));
 
       .title {
         font-size: var(--text-md);

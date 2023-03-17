@@ -71,12 +71,9 @@ const PrevNext = ({ pageContext }: PrevNextShape) => {
 const ProjectDetail = ({ data, pageContext }: ProjectDataShape) => {
   const page = data.project
   const images = data.images.edges
-  console.log('images', images)
-
-  console.log('pageContext', pageContext)
   return (
     <S.ProjectDetail>
-      <Section>
+      <Section pt="0">
         <div className="project-title">
           <h1>{page.client}</h1>
           <p>{page.tagline}</p>
