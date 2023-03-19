@@ -9,7 +9,7 @@ import { breakpoint } from '../../styles/mixins'
 export const ProjectDetail = styled.main`
   display: flex;
   flex-flow: column nowrap;
-  padding-top: var(--space-lg);
+  padding-top: var(--gutter);
   width: 100%;
 
   .project-title {
